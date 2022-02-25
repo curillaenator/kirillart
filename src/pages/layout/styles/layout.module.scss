@@ -1,8 +1,39 @@
 @use "../../../themes/maps/" as vars;
 
 .base {
+  --mode-color-min: var(--palette-mono-white);
+  --mode-color-extrabright: var(--color-extralight);
+  --mode-color-bright: var(--color-light);
+  --mode-color-neutral: var(--color-neutral);
+  --mode-color-intense: var(--color-dark);
+  --mode-color-extraintense: var(--color-extradark);
+  --mode-color-max: var(--palette-mono-black);
+
   width: 100%;
   min-width: 1024px;
+  min-height: 100vh;
+  background-color: var(--mode-color-extrabright);
+  color: var(--mode-color-intense);
+
+  &_lightmode {
+    --mode-color-min: var(--palette-mono-white);
+    --mode-color-extrabright: var(--color-extralight);
+    --mode-color-bright: var(--color-light);
+    --mode-color-neutral: var(--color-neutral);
+    --mode-color-intense: var(--color-dark);
+    --mode-color-extraintense: var(--color-extradark);
+    --mode-color-max: var(--palette-mono-black);
+  }
+
+  &_darkmode {
+    --mode-color-min: var(--palette-mono-black);
+    --mode-color-extrabright: var(--color-extradark);
+    --mode-color-bright: var(--color-dark);
+    --mode-color-neutral: var(--color-neutral);
+    --mode-color-intense: var(--color-light);
+    --mode-color-extraintense: var(--color-extralight);
+    --mode-color-max: var(--palette-mono-white);
+  }
 }
 
 @each $theme in map-keys(vars.$themes) {
@@ -12,8 +43,11 @@
     --color-positive: var(--theme-#{$theme}-positive);
     --color-attention: var(--theme-#{$theme}-attention);
     --color-negative: var(--theme-#{$theme}-negative);
+
+    --color-extralight: var(--theme-#{$theme}-extralight);
     --color-light: var(--theme-#{$theme}-light);
     --color-neutral: var(--theme-#{$theme}-neutral);
     --color-dark: var(--theme-#{$theme}-dark);
+    --color-extradark: var(--theme-#{$theme}-extradark);
   }
 }

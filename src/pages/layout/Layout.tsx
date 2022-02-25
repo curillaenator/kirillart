@@ -10,11 +10,19 @@ import { themeStore } from "@src/store/theme";
 import s from "./styles/layout.module.scss";
 
 export const Layout: FC = () => {
-  const { theme } = useStore(themeStore);
+  const { theme, darkMode } = useStore(themeStore);
+
+  const store = useStore(themeStore);
+  // console.log(store);
 
   return (
-    <div className={cn(s.base, s[theme])}>
-      <Header theme={theme} />
+    <div
+      className={cn(s.base, s[theme], {
+        [s.base_darkmode]: darkMode,
+        [s.base_lightmode]: !darkMode,
+      })}
+    >
+      <Header theme={theme} dm={darkMode} />
 
       <Outlet />
     </div>

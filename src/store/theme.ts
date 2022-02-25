@@ -1,13 +1,20 @@
 import { createStore, createEvent } from "effector";
 
 type Themes = "default" | "alt";
+
 interface ThemeStore {
   theme: Themes;
+  darkMode: boolean;
 }
 
-export const setTheme = createEvent<Themes>();
+const INITIAL_THEME: ThemeStore = {
+  theme: "default",
+  darkMode: false,
+};
 
-export const themeStore = createStore<ThemeStore>({ theme: "default" }).on(
-  setTheme,
-  (state, theme) => ({ ...state, theme })
-);
+export const setTheme = createEvent<Themes>();
+export const setDarkMode = createEvent<boolean>();
+
+export const themeStore = createStore<ThemeStore>(INITIAL_THEME)
+  .on(setTheme, (state, theme) => ({ ...state, theme }))
+  .on(setDarkMode, (state, darkMode) => ({ ...state, darkMode }));
