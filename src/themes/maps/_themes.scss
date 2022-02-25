@@ -1,0 +1,22 @@
+$themes: (
+  default: (
+    primary: var(--palette-violet-500),
+    secondary: var(--palette-blue-500),
+    positive: var(--palette-green-500),
+    attention: var(--palette-amber-500),
+    negative: var(--palette-rose-500),
+    light: var(--palette-gray-true-200),
+    neutral: var(--palette-gray-true-500),
+    dark: var(--palette-gray-true-700),
+  ),
+  alt: (
+    primary: var(--palette-rose-500),
+    secondary: var(--palette-indigo-500),
+    positive: var(--palette-life-500),
+    attention: var(--palette-yellow-500),
+    negative: var(--palette-red-500),
+    light: var(--palette-gray-warm-200),
+    neutral: var(--palette-gray-warm-500),
+    dark: var(--palette-gray-warm-700),
+  ),
+);

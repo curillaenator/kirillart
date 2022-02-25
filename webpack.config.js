@@ -29,8 +29,9 @@ module.exports = {
 
   plugins: [
     new HTMLWebpackPlugin({
+      favicon: "./src/favicon.png",
       template: "./src/index.html",
-      title: "Task Manager",
+      title: "Eff",
     }),
     new CleanWebpackPlugin(),
     // new CopyWebpackPlugin({

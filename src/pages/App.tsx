@@ -5,11 +5,9 @@ import { Layout } from "./layout";
 import { Main } from "./main";
 
 export const App: FC = () => {
-  const theme = "default";
-
   return (
     <Routes>
-      <Route path="/" element={<Layout theme={theme} />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Main />} />
       </Route>
     </Routes>

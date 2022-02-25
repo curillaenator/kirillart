@@ -1,28 +1,19 @@
+@use "../../../themes/maps/" as vars;
+
 .base {
   width: 100%;
   min-width: 1024px;
 }
 
-.default {
-  --color-primary: var(--palette-violet-500);
-  --color-secondary: var(--palette-blue-500);
-  --color-positive: var(--palette-green-500);
-  --color-attention: var(--palette-amber-500);
-  --color-negative: var(--palette-rose-500);
-
-  --color-light: var(--palette-gray-true-200);
-  --color-neutral: var(--palette-gray-true-500);
-  --color-dark: var(--palette-gray-true-700);
-}
-
-.alt {
-  --color-primary: var(--palette-rose-500);
-  --color-secondary: var(--palette-indigo-500);
-  --color-positive: var(--palette-life-500);
-  --color-attention: var(--palette-yellow-500);
-  --color-negative: var(--palette-red-500);
-
-  --color-light: var(--palette-gray-warm-200);
-  --color-neutral: var(--palette-gray-warm-500);
-  --color-dark: var(--palette-gray-warm-700);
+@each $theme in map-keys(vars.$themes) {
+  .#{$theme} {
+    --color-primary: var(--theme-#{$theme}-primary);
+    --color-secondary: var(--theme-#{$theme}-secondary);
+    --color-positive: var(--theme-#{$theme}-positive);
+    --color-attention: var(--theme-#{$theme}-attention);
+    --color-negative: var(--theme-#{$theme}-negative);
+    --color-light: var(--theme-#{$theme}-light);
+    --color-neutral: var(--theme-#{$theme}-neutral);
+    --color-dark: var(--theme-#{$theme}-dark);
+  }
 }

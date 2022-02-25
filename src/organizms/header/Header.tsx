@@ -2,11 +2,18 @@ import React, { FC } from "react";
 
 import s from "./styles/header.module.scss";
 
-export const Header: FC = () => {
+import { setTheme } from "@src/store/theme";
+
+export const Header: FC<{ theme: string }> = ({ theme }) => {
+  const togler = () => {
+    if (theme === "default") setTheme("alt");
+    if (theme === "alt") setTheme("default");
+  };
+
   return (
     <header className={s.base}>
       <h1 className={s.title}>This is header</h1>
-      <p>flex?</p>
+      <button onClick={togler}>change theme</button>
     </header>
   );
 };
