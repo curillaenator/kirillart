@@ -1,0 +1,24 @@
+$circles: ("primary", "positive", "attention", "negative");
+$sizes: ("2xl", "xl", "l", "m", "s", "xs");
+
+.layers {
+  width: 80%;
+  height: 80%;
+
+  .circle {
+    border-radius: 50%;
+  }
+
+  @each $color in $circles {
+    .circle_#{$color} {
+      background-color: var(--color-#{$color});
+    }
+  }
+
+  @each $size in $sizes {
+    .circle_#{$size} {
+      width: var(--size-#{$size}-circle);
+      height: var(--size-#{$size}-circle);
+    }
+  }
+}

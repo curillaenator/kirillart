@@ -9,8 +9,9 @@
   --mode-color-extraintense: var(--color-extradark);
   --mode-color-max: var(--palette-mono-black);
 
+  position: relative;
   width: 100%;
-  min-width: 1024px;
+  min-width: 768px;
   min-height: 100vh;
   background-color: var(--mode-color-extrabright);
   color: var(--mode-color-intense);
