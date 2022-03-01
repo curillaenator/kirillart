@@ -1,0 +1,48 @@
+$colors: ("primary", "secondary", "positive", "attention", "negative");
+$sizes: ("2xl", "xl", "l", "m", "s", "xs");
+
+.button {
+  --button-height: var(--size-2xl-buttonHeight);
+  --button-width: fit-content;
+  --button-gap: var(--size-2xl-buttonGap);
+  --button-padding: var(--size-2xl-buttonPadding);
+  --button-color: var(--color-primary);
+  --button-border-radius: var(--size-2xl-buttonBorderRadius);
+  --button-font-size: var(--size-2xl-buttonFontSize);
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--button-gap);
+  width: var(--button-width);
+  height: var(--button-height);
+  padding: var(--button-padding);
+  box-shadow: 0 4px 16px var(--button-color);
+  border-radius: var(--button-border-radius);
+
+  color: var(--palette-mono-white);
+  font: {
+    weight: 600;
+    size: var(--button-font-size);
+  }
+
+  .button_shape {
+    fill: var(--button-color);
+  }
+}
+
+@each $size in $sizes {
+  .button_#{$size} {
+    --button-height: var(--size-#{$size}-buttonHeight);
+    --button-gap: var(--size-#{$size}-buttonGap);
+    --button-padding: var(--size-#{$size}-buttonPadding);
+    --button-font-size: var(--size-#{$size}-buttonFontSize);
+  }
+}
+
+@each $color in $colors {
+  .button_#{$color} {
+    --button-color: var(--color-#{$color});
+  }
+}

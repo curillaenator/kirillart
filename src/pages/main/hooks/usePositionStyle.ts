@@ -20,6 +20,19 @@ export const usePositionStyle = () => {
     [window.innerWidth]
   );
 
+  const layerRotation: CSSProperties = {
+    transform: ` rotate3d(0, 1, 0, ${(posX / cX) * 8}deg) rotate3d(-1, 0, 0, ${
+      (posY / cY) * 8
+    }deg)`,
+  };
+
+  const circlePositions = Object.fromEntries(
+    Object.keys(LAYERS_RATES).map((layer) => {
+      const q = LAYERS_RATES[layer];
+      return [layer, { transform: `translate(${posX / q}px, ${posY / q}px)` }];
+    })
+  ) as Record<Layers, CSSProperties>;
+
   const calcedStyles = Object.fromEntries(
     Object.keys(LAYERS_RATES).map((layer) => [
       layer,
@@ -34,6 +47,8 @@ export const usePositionStyle = () => {
   ) as Record<Layers, CSSProperties>;
 
   return {
+    layerRotation,
+    circlePositions,
     calcedStyles,
     watchMouse,
   };

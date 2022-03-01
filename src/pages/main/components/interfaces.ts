@@ -1,6 +1,5 @@
-import { CSSProperties } from "react";
-
-export type Opacities = "100" | "80" | "60" | "40" | "20";
+import { CSSProperties, ReactText } from "react";
+import { Layers } from "../interfaces";
 
 type CircleColors =
   | "primary"
@@ -14,12 +13,11 @@ type CircleSizes = "2xl" | "xl" | "l" | "m" | "s" | "xs";
 export interface CircleProps {
   color: CircleColors;
   size: CircleSizes;
-  style?: CSSProperties;
-  // top?: string;
-  // left?: string;
+  style: CSSProperties;
+  title: ReactText;
+  link: string;
 }
 
 export interface CirclesLayerProps {
-  opacity?: Opacities;
-  circles?: CircleProps[];
+  circlePositions: Record<Layers, CSSProperties>;
 }
