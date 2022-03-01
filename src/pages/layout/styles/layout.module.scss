@@ -10,11 +10,12 @@
   --mode-color-max: var(--palette-mono-black);
 
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-width: 768px;
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--mode-color-extrabright);
   color: var(--mode-color-intense);
+  overflow: hidden;
 
   &_lightmode {
     --mode-color-min: var(--palette-mono-white);

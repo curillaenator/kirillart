@@ -1,10 +1,12 @@
 import React from "react";
+import cn from "classnames";
 
 import { usePositionStyle } from "./hooks/usePositionStyle";
 
 import { Header } from "@src/organizms";
-import { Back } from "./components/Back";
+import { CirclesLayer } from "./components/CirclesLayer";
 
+import { LAYERS } from "./constants";
 import s from "./styles/main.module.scss";
 
 export const Main = () => {
@@ -14,9 +16,11 @@ export const Main = () => {
     <div className={s.main} onMouseMove={watchMouse}>
       <Header />
 
-      <div className={s.back} style={calcedStyles.back}>
-        <Back />
-      </div>
+      {LAYERS.map((layer) => (
+        <div className={s.back_base} style={calcedStyles[layer.style]}>
+          <CirclesLayer circles={layer.circles} />
+        </div>
+      ))}
     </div>
   );
 };

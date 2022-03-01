@@ -1,24 +1,61 @@
-$circles: ("primary", "positive", "attention", "negative");
+$circles: ("primary", "secondary", "positive", "attention", "negative");
 $sizes: ("2xl", "xl", "l", "m", "s", "xs");
+$opacities: ("100", "80", "60", "40", "20");
+
+@keyframes circle-brightness {
+  0% {
+    filter: saturate(100%) brightness(1);
+  }
+  33% {
+    filter: saturate(90%) brightness(0.9);
+  }
+  66% {
+    filter: saturate(120%) brightness(1.3);
+  }
+  100% {
+    filter: saturate(100%) brightness(1);
+  }
+}
 
 .layers {
   width: 80%;
   height: 80%;
+  position: relative;
 
   .circle {
+    --circle-size: var(--size-2xl-circle);
+    --circle-bg-color: var(--color-primary);
+    --circle-opacity: 100%;
+    --circle-duration: 2s;
+    --circle-delay: 0s;
+
+    position: absolute;
+    width: var(--circle-size);
+    height: var(--circle-size);
     border-radius: 50%;
+    background-color: var(--circle-bg-color);
+    opacity: var(--circle-opacity);
+    animation: circle-brightness infinite ease-in-out var(--circle-duration)
+      var(--circle-delay);
   }
 
   @each $color in $circles {
     .circle_#{$color} {
-      background-color: var(--color-#{$color});
+      --circle-bg-color: var(--color-#{$color});
     }
   }
 
   @each $size in $sizes {
     .circle_#{$size} {
-      width: var(--size-#{$size}-circle);
-      height: var(--size-#{$size}-circle);
+      --circle-size: var(--size-#{$size}-circle);
+      --circle-delay: var(--size-#{$size}-delay);
+      --circle-duration: var(--size-#{$size}-duration);
+    }
+  }
+
+  @each $opacity in $opacities {
+    .circle_#{$opacity} {
+      --circle-opacity: calc(#{$opacity} / 100);
     }
   }
 }

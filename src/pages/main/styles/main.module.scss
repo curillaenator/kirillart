@@ -1,19 +1,12 @@
 .main {
-  // padding: 0 16px;
   position: relative;
-}
 
-.back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-
-  // .image {
-  //   width: 80%;
-  //   height: 80%;
-  //   object-fit: contain;
-  // }
+  .back_base {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
 }

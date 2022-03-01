@@ -5,6 +5,19 @@
   @include utils.generate-varaibles($map: maps.$palette, $prefix: --palette);
   @include utils.generate-varaibles($map: maps.$themes, $prefix: --theme);
   @include utils.generate-varaibles($map: maps.$sizes, $prefix: --size);
+
+  // @include utils.generate-varaibles(
+  //   $map: maps.$circleLarge,
+  //   $prefix: --circleLarge
+  // );
+  // @include utils.generate-varaibles(
+  //   $map: maps.$circleMedium,
+  //   $prefix: --circleMedium
+  // );
+  // @include utils.generate-varaibles(
+  //   $map: maps.$circleSmall,
+  //   $prefix: --circleSmall
+  // );
 }
 
 *,
