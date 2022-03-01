@@ -10,7 +10,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       size: "xs",
       link: "/misc",
       style: {
-        top: "26%",
+        top: "24%",
         left: "31%",
         boxShadow: "0 16px 48px var(--color-secondary)",
       },
@@ -52,7 +52,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       size: "m",
       link: "/contacts",
       style: {
-        top: "46%",
+        top: "53%",
         left: "5%",
         boxShadow: "0 16px 80px var(--color-negative)",
       },
@@ -68,7 +68,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       style: {
         top: "30%",
         left: "30%",
-        boxShadow: "0 16px 80px var(--color-attention)",
+        boxShadow: "0 16px 96px var(--color-attention)",
       },
     },
   },

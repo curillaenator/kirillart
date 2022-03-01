@@ -14,7 +14,7 @@ export const Button: FC<ButtonProps> = (props) => {
       {...rest}
       className={cn(s.button, s[`button_${size}`], s[`button_${appearance}`])}
     >
-      <Shape className={s.button_shape} />
+      <Shape className={s.button_shape} isAdaptive />
 
       {children || ""}
     </button>

@@ -1,6 +1,11 @@
 import { createStore, createEvent } from "effector";
 
-type Themes = "default" | "alt";
+export type Themes =
+  | "default"
+  | "firecracker"
+  | "life"
+  | "ocean"
+  | "alternative";
 
 interface ThemeStore {
   theme: Themes;

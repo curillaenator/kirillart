@@ -3,7 +3,7 @@ export const LAYERS_RATES: Record<string, number> = {
   back4: -20,
   back3: -60,
   back2: 20,
-  back1: 6,
+  back1: 8,
 };
 
 export const INITIAL_POSITION = {
