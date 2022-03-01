@@ -41,6 +41,8 @@
 @each $theme in map-keys(vars.$themes) {
   .#{$theme} {
     --color-primary: var(--theme-#{$theme}-primary);
+    --color-primary-400: var(--theme-#{$theme}-primary-400);
+
     --color-secondary: var(--theme-#{$theme}-secondary);
     --color-positive: var(--theme-#{$theme}-positive);
     --color-attention: var(--theme-#{$theme}-attention);

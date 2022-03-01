@@ -1,10 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
-import cn from "classnames";
 
 import { usePositionStyle } from "./hooks/usePositionStyle";
 
-import { Header } from "@src/organizms";
+import { Header, Display } from "@src/organizms";
 import { CirclesLayer } from "./components/CirclesLayer";
 
 import s from "./styles/main.module.scss";
@@ -12,14 +11,14 @@ import s from "./styles/main.module.scss";
 //@ts-ignore
 import avatar from "./assets/avatar.jpeg";
 
-export const Main = () => {
+export const Main: FC = () => {
   const { layerRotation, circlePositions, watchMouse } = usePositionStyle();
 
   return (
     <div className={s.main} onMouseMove={watchMouse}>
       <Header />
 
-      <div className={cn(s.back_base, s.justify_center)} style={layerRotation}>
+      <div className={s.layer_base} style={layerRotation}>
         <CirclesLayer circlePositions={circlePositions} />
 
         {/* <Link to="kirill">
@@ -31,6 +30,8 @@ export const Main = () => {
           />
         </Link> */}
       </div>
+
+      <Display />
     </div>
   );
 };

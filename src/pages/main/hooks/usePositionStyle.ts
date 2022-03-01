@@ -33,23 +33,9 @@ export const usePositionStyle = () => {
     })
   ) as Record<Layers, CSSProperties>;
 
-  const calcedStyles = Object.fromEntries(
-    Object.keys(LAYERS_RATES).map((layer) => [
-      layer,
-      {
-        transform: `translate(${posX / LAYERS_RATES[layer]}px, ${
-          posY / LAYERS_RATES[layer]
-        }px) rotate3d(0, 1, 0, ${(posX / cX) * 8}deg) rotate3d(-1, 0, 0, ${
-          (posY / cY) * 8
-        }deg)`,
-      },
-    ])
-  ) as Record<Layers, CSSProperties>;
-
   return {
     layerRotation,
     circlePositions,
-    calcedStyles,
     watchMouse,
   };
 };

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 
 import { useTheme } from "./hooks/useTheme";
 
@@ -8,7 +8,7 @@ import { Button } from "@src/components/button/Button";
 
 import s from "./styles/header.module.scss";
 
-export const Header: FC = () => {
+const HeaderComponent: FC = () => {
   const { themeSelector, darkmodeSetter } = useTheme();
 
   return (
@@ -23,3 +23,5 @@ export const Header: FC = () => {
     </header>
   );
 };
+
+export const Header = memo(HeaderComponent);

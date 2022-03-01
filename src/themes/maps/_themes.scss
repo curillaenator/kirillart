@@ -1,6 +1,7 @@
 $themes: (
   default: (
     primary: var(--palette-violet-500),
+    "primary-400": var(--palette-violet-400),
     secondary: var(--palette-blue-500),
     positive: var(--palette-green-500),
     attention: var(--palette-amber-500),
@@ -13,6 +14,7 @@ $themes: (
   ),
   firecracker: (
     primary: var(--palette-orange-500),
+    "primary-400": var(--palette-orange-400),
     secondary: var(--palette-amber-500),
     positive: var(--palette-lime-500),
     attention: var(--palette-yellow-500),
@@ -25,10 +27,11 @@ $themes: (
   ),
   life: (
     primary: var(--palette-lime-500),
-    secondary: var(--palette-life-500),
+    "primary-400": var(--palette-lime-400),
+    secondary: var(--palette-life-400),
     positive: var(--palette-green-500),
     attention: var(--palette-amber-500),
-    negative: var(--palette-pink-500),
+    negative: var(--palette-rose-500),
     extralight: var(--palette-gray-true-100),
     light: var(--palette-gray-true-200),
     neutral: var(--palette-gray-true-500),
@@ -37,6 +40,7 @@ $themes: (
   ),
   ocean: (
     primary: var(--palette-blue-500),
+    "primary-400": var(--palette-blue-400),
     secondary: var(--palette-sky-500),
     positive: var(--palette-teal-500),
     attention: var(--palette-orange-500),
@@ -49,6 +53,7 @@ $themes: (
   ),
   alternative: (
     primary: var(--palette-rose-500),
+    "primary-400": var(--palette-rose-400),
     secondary: var(--palette-indigo-500),
     positive: var(--palette-life-500),
     attention: var(--palette-yellow-500),

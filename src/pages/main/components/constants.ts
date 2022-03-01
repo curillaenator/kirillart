@@ -5,14 +5,14 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
   {
     posKey: "back1",
     circle: {
-      title: "misc",
+      title: "Me",
       color: "secondary",
       size: "xs",
-      link: "/misc",
+      link: "/aboutme",
       style: {
         top: "24%",
         left: "31%",
-        boxShadow: "0 16px 48px var(--color-secondary)",
+        // boxShadow: "0 16px 48px var(--color-secondary)",
       },
     },
   },
@@ -26,7 +26,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       style: {
         top: "22%",
         left: "6%",
-        boxShadow: "0 16px 48px var(--color-primary)",
+        // boxShadow: "0 16px 48px var(--color-primary)",
       },
     },
   },
@@ -40,7 +40,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       style: {
         top: "60%",
         left: "20%",
-        boxShadow: "0 16px 64px var(--color-positive)",
+        // boxShadow: "0 16px 64px var(--color-positive)",
       },
     },
   },
@@ -54,7 +54,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       style: {
         top: "53%",
         left: "5%",
-        boxShadow: "0 16px 80px var(--color-negative)",
+        // boxShadow: "0 16px 80px var(--color-negative)",
       },
     },
   },
@@ -68,7 +68,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       style: {
         top: "30%",
         left: "30%",
-        boxShadow: "0 16px 96px var(--color-attention)",
+        // boxShadow: "0 16px 96px var(--color-attention)",
       },
     },
   },
