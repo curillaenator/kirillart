@@ -40,7 +40,7 @@ $sizes: ("2xl", "xl", "l", "m", "s", "xs");
     transition: 0.08s linear;
     text-decoration: none;
     color: var(--palette-mono-white);
-    box-shadow: 0 16px 80px var(--circle-bg-color);
+    box-shadow: 0 16px 56px var(--circle-bg-color);
     animation: circle-brightness infinite ease-in-out var(--circle-duration)
       var(--circle-delay);
 
@@ -52,7 +52,7 @@ $sizes: ("2xl", "xl", "l", "m", "s", "xs");
     &:hover {
       animation: none;
       filter: saturate(120%) brightness(1.3);
-      // box-shadow: 0 16px 80px var(--circle-bg-color),
+      box-shadow: 0 16px 80px var(--circle-bg-color);
       //   inset 0 0 0 6px var(--circle-border-color);
     }
 

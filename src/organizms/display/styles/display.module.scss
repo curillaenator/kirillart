@@ -4,6 +4,22 @@
   right: 0;
   width: 50%;
   height: 100vh;
+  padding: 96px 5% 80px;
 
-  // background-color: gray;
+  .screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+
+    .screen_shape {
+      fill: var(--mode-color-bright);
+    }
+  }
+}
+
+.screenWrapper {
+  width: 100%;
+  height: 100%;
+  padding: 32px;
 }
