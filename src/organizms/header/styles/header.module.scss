@@ -10,7 +10,13 @@
   padding: 0 32px;
   z-index: 1000;
 
-  .title {
-    color: var(--color-primary);
+  .block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
   }
+
+  // .title {
+  //   color: var(--color-primary);
+  // }
 }

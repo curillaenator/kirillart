@@ -8,6 +8,9 @@ $sizes: (
     buttonPadding: 0 20px,
     buttonFontSize: 16px,
     buttonBorderRadius: 26px,
+    switchHeight: 40px,
+    switchWidth: 108px,
+    switchIconSize: 24px,
   ),
   "xl": (
     circle: 256px,
@@ -18,6 +21,9 @@ $sizes: (
     buttonPadding: 0 20px,
     buttonFontSize: 16px,
     buttonBorderRadius: 22px,
+    switchHeight: 32px,
+    switchWidth: 86px,
+    switchIconSize: 20px,
   ),
   "l": (
     circle: 192px,
@@ -28,6 +34,9 @@ $sizes: (
     buttonPadding: 0 16px,
     buttonFontSize: 14px,
     buttonBorderRadius: 18px,
+    switchHeight: 24px,
+    switchWidth: 64px,
+    switchIconSize: 16px,
   ),
   "m": (
     circle: 160px,
@@ -38,6 +47,9 @@ $sizes: (
     buttonPadding: 0 12px,
     buttonFontSize: 12px,
     buttonBorderRadius: 18px,
+    switchHeight: 20px,
+    switchWidth: 54px,
+    switchIconSize: 14px,
   ),
   "s": (
     circle: 128px,
@@ -48,6 +60,9 @@ $sizes: (
     buttonPadding: 0 8px,
     buttonFontSize: 12px,
     buttonBorderRadius: 12px,
+    switchHeight: 16px,
+    switchWidth: 44px,
+    switchIconSize: 12px,
   ),
   "xs": (
     circle: 80px,
@@ -58,5 +73,8 @@ $sizes: (
     buttonPadding: 0 6px,
     buttonFontSize: 12px,
     buttonBorderRadius: 8px,
+    switchHeight: 10px,
+    switchWidth: 28px,
+    switchIconSize: 8px,
   ),
 );

@@ -21,6 +21,7 @@ export const useTheme = () => {
   }, [theme]);
 
   return {
+    darkMode,
     theme,
     themeSelector,
     darkmodeSetter: () => setDarkMode(!darkMode),

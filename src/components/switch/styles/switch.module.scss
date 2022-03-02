@@ -1,0 +1,62 @@
+$sizes: ("2xl", "xl", "l", "m", "s", "xs");
+
+.switch {
+  --switch-height: var(--size-2xl-switchHeight);
+  --switch-width: var(--size-2xl-switchWidth);
+  --switch-icon-size: var(--size-2xl-switchIconSize);
+  --switch-color: var(--mode-color-bright);
+  --switch-shadow-color: transparent;
+  --switch-translate-x: translateX(0%);
+
+  position: relative;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background-color: transparent;
+  z-index: 100;
+
+  &_active {
+    --switch-color: var(--color-primary);
+    --switch-shadow-color: var(--color-primary);
+    --switch-translate-x: translateX(100%);
+  }
+
+  .switch_shape {
+    fill: var(--mode-color-extrabright);
+    stroke: var(--mode-color-bright);
+    stroke-width: 1px;
+  }
+
+  .switch_toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--switch-width) / 2);
+    height: var(--switch-height);
+    z-index: 50;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px var(--switch-shadow-color);
+    transition: 0.12s ease-in-out;
+    transform: var(--switch-translate-x);
+
+    &_icon {
+      width: var(--switch-icon-size);
+      height: var(--switch-icon-size);
+    }
+
+    &_shape {
+      fill: var(--switch-color);
+    }
+  }
+}
+
+@each $size in $sizes {
+  .switch_#{$size} {
+    --switch-height: var(--size-#{$size}-switchHeight);
+    --switch-width: var(--size-#{$size}-switchWidth);
+    --switch-icon-size: var(--size-#{$size}-switchIconSize);
+  }
+}
