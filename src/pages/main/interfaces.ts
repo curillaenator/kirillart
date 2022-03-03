@@ -1,11 +1,14 @@
 export type Layers =
-  | "back6"
+  | "cloud4"
+  | "cloud3"
+  | "cloud2"
+  | "cloud1"
   | "back5"
   | "back4"
   | "back3"
   | "back2"
   | "back1"
-  | "middle";
+  | "bg";
 
 export interface Position {
   cX: number;

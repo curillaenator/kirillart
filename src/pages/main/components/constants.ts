@@ -10,9 +10,8 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       size: "xs",
       link: "/aboutme",
       style: {
-        top: "20%",
-        left: "31%",
-        // boxShadow: "0 16px 48px var(--color-secondary)",
+        top: "16%",
+        left: "32%",
       },
     },
   },
@@ -26,7 +25,6 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       style: {
         top: "18%",
         left: "6%",
-        // boxShadow: "0 16px 48px var(--color-primary)",
       },
     },
   },
@@ -39,8 +37,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       link: "/examples",
       style: {
         top: "56%",
-        left: "20%",
-        // boxShadow: "0 16px 64px var(--color-positive)",
+        left: "22%",
       },
     },
   },
@@ -52,9 +49,8 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       size: "m",
       link: "/contacts",
       style: {
-        top: "49%",
+        top: "54%",
         left: "5%",
-        // boxShadow: "0 16px 80px var(--color-negative)",
       },
     },
   },
@@ -66,9 +62,8 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       size: "s",
       link: "/skills",
       style: {
-        top: "26%",
+        top: "30%",
         left: "30%",
-        // boxShadow: "0 16px 96px var(--color-attention)",
       },
     },
   },

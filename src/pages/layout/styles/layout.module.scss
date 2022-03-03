@@ -11,7 +11,7 @@
 
   position: relative;
   width: 100vw;
-  min-width: 768px;
+  min-width: 1024px;
   height: 100vh;
   background-color: var(--mode-color-extrabright);
   color: var(--mode-color-intense);
@@ -40,8 +40,15 @@
 
 @each $theme in map-keys(vars.$themes) {
   .#{$theme} {
-    --color-primary: var(--theme-#{$theme}-primary);
+    --color-primary-100: var(--theme-#{$theme}-primary-100);
+    --color-primary-200: var(--theme-#{$theme}-primary-200);
+    --color-primary-300: var(--theme-#{$theme}-primary-300);
     --color-primary-400: var(--theme-#{$theme}-primary-400);
+    --color-primary: var(--theme-#{$theme}-primary);
+    --color-primary-600: var(--theme-#{$theme}-primary-600);
+    --color-primary-700: var(--theme-#{$theme}-primary-700);
+    --color-primary-800: var(--theme-#{$theme}-primary-800);
+    --color-primary-900: var(--theme-#{$theme}-primary-900);
 
     --color-secondary: var(--theme-#{$theme}-secondary);
     --color-positive: var(--theme-#{$theme}-positive);

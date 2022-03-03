@@ -21,12 +21,13 @@ export const usePositionStyle = () => {
   );
 
   const layerRotation: CSSProperties = {
-    transform: ` rotate3d(0, 1, 0, ${(posX / cX) * 8}deg) rotate3d(-1, 0, 0, ${
-      (posY / cY) * 8
-    }deg)`,
+    transform: `
+    rotate3d(0, 1, 0, ${(posX / cX) * 12}deg) 
+    rotate3d(-1, 0, 0, ${(posY / cY) * 12}deg)
+    `,
   };
 
-  const circlePositions = Object.fromEntries(
+  const positionStyles = Object.fromEntries(
     Object.keys(LAYERS_RATES).map((layer) => {
       const q = LAYERS_RATES[layer];
       return [layer, { transform: `translate(${posX / q}px, ${posY / q}px)` }];
@@ -35,7 +36,7 @@ export const usePositionStyle = () => {
 
   return {
     layerRotation,
-    circlePositions,
+    positionStyles,
     watchMouse,
   };
 };
