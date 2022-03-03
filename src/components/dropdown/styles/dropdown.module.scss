@@ -1,0 +1,110 @@
+@use "../../../themes/maps/" as maps;
+
+@keyframes list_appear {
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateY(0px);
+  }
+}
+
+.dropdown {
+  --icon-translate: rotate(0deg);
+  --trigger-shape-color: var(--mode-color-bright);
+  --trigger-text-color: var(--mode-color-intense);
+
+  position: relative;
+
+  &_active {
+    --icon-translate: rotate(180deg);
+    --trigger-shape-color: var(--color-primary);
+    --trigger-text-color: var(--palette-mono-white);
+  }
+
+  .trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-width: 160px;
+    height: 40px;
+    padding: 0 16px;
+
+    &_shape {
+      fill: var(--trigger-shape-color);
+    }
+
+    &_title {
+      color: var(--trigger-text-color);
+      font: {
+        weight: 600;
+        size: 16px;
+      }
+    }
+
+    &_icon {
+      transition: 0.08s linear;
+      transform: var(--icon-translate);
+      fill: var(--trigger-text-color);
+    }
+  }
+
+  .list {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    padding: 8px 16px;
+    animation: list_appear 0.2s ease-in;
+    z-index: 1000;
+
+    &_shape {
+      fill: var(--mode-color-bright);
+    }
+
+    &_item {
+      --item-text-color: var(--mode-color-intense);
+      --item-point-color: var(--color-primary);
+      --item-point-opacity: 0.6;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      color: var(--item-text-color);
+      transition: 0.08s linear;
+
+      font: {
+        weight: 600;
+        size: 14px;
+      }
+
+      &:hover {
+        --item-point-opacity: 1;
+        --item-text-color: var(--item-point-color);
+      }
+
+      &_color {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: var(--item-point-color);
+        transition: 0.08s linear;
+        opacity: var(--item-point-opacity);
+      }
+
+      @each $theme in map-keys(maps.$themes) {
+        &_#{$theme} {
+          --item-point-color: var(--theme-#{$theme}-primary);
+        }
+      }
+    }
+  }
+}

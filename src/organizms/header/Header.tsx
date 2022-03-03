@@ -4,22 +4,19 @@ import { useTheme } from "./hooks/useTheme";
 
 import { Button } from "@src/components/button";
 import { Switch } from "@src/components/switch";
+import { Dropdown } from "@src/components/dropdown";
 
 import { THEMES } from "./constants";
 
 import s from "./styles/header.module.scss";
 
 const HeaderComponent: FC = () => {
-  const { theme, darkMode, themeSelector, darkmodeSetter } = useTheme();
+  const { theme, themesList, darkMode, darkmodeSetter } = useTheme();
 
   return (
     <header className={s.base}>
       <div className={s.block}>
-        <Button size="m" onClick={themeSelector}>
-          Change theme
-        </Button>
-
-        <h4>{THEMES[theme]}</h4>
+        <Dropdown title={THEMES[theme]} list={themesList} />
       </div>
 
       <div className={s.block}>

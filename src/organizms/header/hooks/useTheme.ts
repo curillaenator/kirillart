@@ -7,23 +7,17 @@ import { THEMES } from "../constants";
 export const useTheme = () => {
   const { theme, darkMode } = useStore(themeStore);
 
-  const themeSelector = useCallback(() => {
-    const themesNames = Object.keys(THEMES) as Themes[];
+  const themesNames = Object.keys(THEMES) as Themes[];
 
-    const curThemeIndex = themesNames.findIndex(
-      (themeName) => themeName === theme
-    );
-    const lastIndex = themesNames.length - 1;
-
-    if (curThemeIndex === lastIndex) return setTheme(themesNames[0]);
-
-    setTheme(themesNames[curThemeIndex + 1]);
-  }, [theme]);
+  const themesList = themesNames.map((themeName) => ({
+    title: THEMES[themeName],
+    onClick: () => setTheme(themeName),
+  }));
 
   return {
     darkMode,
     theme,
-    themeSelector,
+    themesList,
     darkmodeSetter: () => setDarkMode(!darkMode),
   };
 };
