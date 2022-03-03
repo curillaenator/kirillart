@@ -19,15 +19,6 @@ export const Main: FC = () => {
         <Background positionStyles={positionStyles} />
 
         <CirclesLayer circlePositions={positionStyles} />
-
-        {/* <Link to="kirill">
-          <img
-            src={avatar}
-            alt="Avatar"
-            className={s.avatar}
-            style={circlePositions.back2}
-          />
-        </Link> */}
       </div>
 
       <Display />
