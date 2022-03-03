@@ -2,7 +2,6 @@ import React, { FC, memo } from "react";
 
 import { useTheme } from "./hooks/useTheme";
 
-import { Button } from "@src/components/button";
 import { Switch } from "@src/components/switch";
 import { Dropdown } from "@src/components/dropdown";
 
@@ -20,11 +19,9 @@ const HeaderComponent: FC = () => {
       </div>
 
       <div className={s.block}>
-        <h4>Mode:</h4>
-
         <Switch
-          size="m"
-          icon={darkMode ? "moon" : "sun"}
+          size="l"
+          icon="mode"
           value={darkMode}
           onChange={darkmodeSetter}
         />

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-export type IconNames = "sun" | "moon";
+export type IconNames = "sun" | "moon" | "mode";
 
 interface IconProps {
   className: string;
@@ -26,6 +26,15 @@ export const icons: Record<IconNames, FC<IconProps>> = {
       fill="rgb(55, 65, 81)"
     >
       <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.685 21.965c3.205-2.154 5.315-5.813 5.315-9.965s-2.11-7.811-5.315-9.965c5.202.353 9.315 4.673 9.315 9.965s-4.113 9.612-9.315 9.965z" />
+    </svg>
+  ),
+  mode: ({ className }) => (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z" />
     </svg>
   ),
 };

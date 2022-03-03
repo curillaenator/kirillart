@@ -13,6 +13,7 @@ $sizes: ("2xl", "xl", "l", "m", "s", "xs");
   height: var(--switch-height);
   background-color: transparent;
   z-index: 100;
+  flex-shrink: 0;
 
   &_active {
     --switch-color: var(--color-primary);
@@ -45,6 +46,7 @@ $sizes: ("2xl", "xl", "l", "m", "s", "xs");
     &_icon {
       width: var(--switch-icon-size);
       height: var(--switch-icon-size);
+      fill: var(--mode-color-intense);
     }
 
     &_shape {

@@ -17,7 +17,6 @@ const DisplayComponent: FC = () => {
           <Route path="experience" element={<h3>experience</h3>} />
           <Route path="skills" element={<h3>skills</h3>} />
           <Route path="contacts" element={<h3>contacts</h3>} />
-          <Route path="examples" element={<h3>examples</h3>} />
         </Routes>
       </div>
     </div>
