@@ -11,7 +11,7 @@ export const App: FC = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Main />} />
         <Route path="examples" element={<Examples />} />
-        <Route path="*" element={<Main />} />
+        <Route path="/*" element={<Main />} />
       </Route>
     </Routes>
   );

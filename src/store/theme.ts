@@ -14,7 +14,7 @@ interface ThemeStore {
 
 const INITIAL_THEME: ThemeStore = {
   theme: "default",
-  darkMode: false,
+  darkMode: true,
 };
 
 export const setTheme = createEvent<Themes>();

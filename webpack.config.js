@@ -64,11 +64,11 @@ module.exports = {
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
-      // {
-      //   test: /\.woff2/,
-      //   exclude: /node_modules/,
-      //   type: "asset/inline",
-      // },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        exclude: /node_modules/,
+        type: "asset/resource",
+      },
     ],
   },
 

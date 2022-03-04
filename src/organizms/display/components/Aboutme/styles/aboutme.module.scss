@@ -1,0 +1,70 @@
+.aboutme {
+  --avatar-border-width: 8px;
+
+  width: 100%;
+  padding-top: 10%;
+  padding-right: 10%;
+
+  .texts {
+    width: 100%;
+
+    &_left {
+      text-align: right;
+    }
+
+    &_positive {
+      font-weight: 600;
+      color: var(--color-positive);
+    }
+
+    &_intense {
+      color: var(--mode-color-intense);
+    }
+
+    &_bright {
+      color: var(--palette-gray-true-200);
+    }
+
+    &_primary {
+      color: var(--color-primary);
+    }
+
+    &_contrast {
+      color: var(--color-attention);
+    }
+
+    &_space {
+      margin-bottom: 12px;
+    }
+
+    &_fontsize14 {
+      font-size: 14px;
+    }
+
+    &_fontsize48 {
+      font-size: 48px;
+    }
+  }
+
+  .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 32px;
+    margin-bottom: 32px;
+
+    &_photo {
+      width: 50%;
+      aspect-ratio: 1 / 1;
+      flex-shrink: 0;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50% 50% 50% 32px;
+        object-fit: cover;
+        border: var(--avatar-border-width) solid var(--color-primary);
+      }
+    }
+  }
+}

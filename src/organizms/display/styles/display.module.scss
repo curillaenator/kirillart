@@ -1,4 +1,6 @@
 .display {
+  --display-shape-color: var(--mode-color-bright);
+
   position: absolute;
   top: 0;
   right: 0;
@@ -13,7 +15,11 @@
     z-index: 200;
 
     .screen_shape {
-      fill: var(--mode-color-bright);
+      fill: var(--display-shape-color);
+
+      &_invisible {
+        --display-shape-color: transparent;
+      }
     }
   }
 }

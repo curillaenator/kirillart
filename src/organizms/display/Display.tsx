@@ -1,19 +1,33 @@
 import React, { FC, memo } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import cn from "classnames";
 
 import { Shape } from "@src/components/shape";
 import { Aboutme, Contacts, Skills } from "./components";
 
+import { ABOUTME } from "./constants";
+
 import s from "./styles/display.module.scss";
 
 const DisplayComponent: FC = () => {
+  const location = useLocation();
+
+  if (location.pathname === "/") return <Navigate to="aboutme" />;
+
   return (
     <div className={s.display}>
       <div className={s.screen}>
-        <Shape isAdaptive className={s.screen_shape} borderRadius={32} />
+        <Shape
+          isAdaptive
+          className={cn(s.screen_shape, {
+            [s.screen_shape_invisible]:
+              location.pathname.replace("/", "") === "aboutme",
+          })}
+          borderRadius={32}
+        />
 
         <Routes>
-          <Route path="aboutme" element={<Aboutme />} />
+          <Route path="aboutme" element={<Aboutme {...ABOUTME} />} />
           <Route path="experience" element={<h3>experience</h3>} />
           <Route path="skills" element={<Skills />} />
           <Route path="contacts" element={<Contacts />} />
