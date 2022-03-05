@@ -20,8 +20,7 @@ const DisplayComponent: FC = () => {
         <Shape
           isAdaptive
           className={cn(s.screen_shape, {
-            [s.screen_shape_invisible]:
-              location.pathname.replace("/", "") === "aboutme",
+            [s.screen_shape_invisible]: /aboutme/i.test(location.pathname),
           })}
           borderRadius={32}
         />

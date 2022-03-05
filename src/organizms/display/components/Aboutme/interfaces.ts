@@ -6,4 +6,5 @@ export interface AboutmeProps {
   userName: ReactText;
   job: ReactText;
   description: string;
+  slogan: string;
 }
