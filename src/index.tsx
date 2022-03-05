@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { App } from "@src/pages/App";
 
 import "swiper/scss";
-import "swiper/scss/pagination";
+
 import "@src/index.scss";
 
 render(

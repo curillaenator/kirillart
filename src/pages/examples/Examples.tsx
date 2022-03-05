@@ -4,55 +4,40 @@ import { Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperInstance } from "swiper";
 
-import { Button } from "@src/components/button";
-import { Slide } from "./components/Slide";
+import { usePositionStyle } from "@src/utils";
+
+import { Background } from "@src/components/background";
+import { Slide, Header } from "./components";
 
 import { SLIDES } from "./contsants";
 
-import { SlideProps } from "./interfaces";
+import { SlideProps } from "./components/interfaces";
 
 import s from "./styles/examples.module.scss";
 
 export const Examples: FC = () => {
   const navigate = useNavigate();
 
-  const [examples, setExamples] = useState<SlideProps[]>([]);
+  const { layerRotation, positionStyles, watchMouse } = usePositionStyle();
 
+  const [examples, setExamples] = useState<SlideProps[]>([]);
   const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className={s.examples}>
-      <header className={s.header}>
-        <Button size="m" iconName="back" isGhost onClick={() => navigate(-1)}>
-          Back
-        </Button>
+    <div className={s.examples} onMouseMove={watchMouse}>
+      <Header
+        title={examples[activeIndex]?.title || ""}
+        prevDisabled={activeIndex === 0}
+        nextDisabled={activeIndex === examples.length - 1}
+        onBack={() => navigate(-1)}
+        onPrev={() => swiper?.slidePrev()}
+        onNext={() => swiper?.slideNext()}
+      />
 
-        <h1>{examples[activeIndex]?.title || ""}</h1>
-
-        <div className={s.prevnext}>
-          <Button
-            size="s"
-            appearance="secondary"
-            onClick={() => swiper?.slidePrev()}
-            disabled={activeIndex === 0}
-            iconName="arrowLeft"
-          >
-            Prev
-          </Button>
-
-          <Button
-            size="s"
-            appearance="secondary"
-            onClick={() => swiper?.slideNext()}
-            disabled={activeIndex === examples.length - 1}
-            iconName="arrowRight"
-            reversed
-          >
-            Next
-          </Button>
-        </div>
-      </header>
+      <div className={s.background} style={layerRotation}>
+        <Background positionStyles={positionStyles} />
+      </div>
 
       <main className={s.main}>
         <Swiper

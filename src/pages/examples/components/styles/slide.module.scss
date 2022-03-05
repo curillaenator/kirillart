@@ -3,24 +3,55 @@
   gap: 32px;
   width: 100%;
   height: 100%;
-  padding: 0 32px;
+  padding: 32px 80px;
 
   .description {
     width: 100%;
 
+    .title {
+      margin-bottom: 8px;
+      color: var(--color-primary);
+    }
+
+    .space {
+      margin-bottom: 16px;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
     .link {
+      --link-icon-color: var(--mode-color-intense);
+
       &_icon {
-        width: 24px;
-        height: 24px;
+        fill: var(--link-icon-color);
+        width: 32px;
+        height: 32px;
+        transition: 0.08s linear;
+      }
+
+      &:hover {
+        --link-icon-color: var(--color-primary);
+      }
+
+      &:active {
+        --link-icon-color: var(--color-primary-700);
       }
     }
 
-    // .title {
-    // }
+    .techIcon {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+    }
   }
 
   .gallery {
-    width: 40%;
+    width: 60%;
     flex-shrink: 0;
   }
 }

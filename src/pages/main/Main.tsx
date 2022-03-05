@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { usePositionStyle } from "./hooks/usePositionStyle";
+import { usePositionStyle } from "@src/utils";
 
 import { Background } from "@src/components/background";
 import { Header, Display } from "@src/organizms";

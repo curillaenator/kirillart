@@ -11,18 +11,6 @@
     &_left {
       text-align: right;
     }
-    &_stroked {
-      -webkit-text-stroke: 2px var(--mode-color-intense);
-    }
-
-    &_positive {
-      font-weight: 600;
-      color: var(--color-positive);
-    }
-
-    // &_intense {
-    //   color: var(--mode-color-intense);
-    // }
 
     &_bright {
       color: var(--palette-gray-true-200);
@@ -33,6 +21,7 @@
     }
 
     &_contrast {
+      font-weight: 600;
       color: var(--color-attention);
     }
 
@@ -46,6 +35,7 @@
 
     &_fontsize48 {
       font-size: 48px;
+      margin-bottom: 12px;
     }
   }
 

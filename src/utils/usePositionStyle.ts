@@ -1,7 +1,17 @@
 import { useState, useCallback, MouseEvent, CSSProperties } from "react";
-import { LAYERS_RATES, INITIAL_POSITION } from "../constants";
+import { LAYERS_RATES, INITIAL_POSITION } from "./constants";
 
-import { Layers } from "../interfaces";
+export type Layers =
+  | "cloud4"
+  | "cloud3"
+  | "cloud2"
+  | "cloud1"
+  | "back5"
+  | "back4"
+  | "back3"
+  | "back2"
+  | "back1"
+  | "bg";
 
 export const usePositionStyle = () => {
   const [position, setPosition] = useState(INITIAL_POSITION);
