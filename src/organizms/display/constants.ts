@@ -9,6 +9,6 @@ export const ABOUTME: AboutmeProps = {
   greating:
     "I'm looking for opportunities to be a part of strong TEAM creating outstanding products!!!",
   description:
-    "By this webapp I represent my resume which describes my abilities and skills as well as demonstrates some of them by itself",
+    "With this webapp I expose my abilities and skills as well as demonstrate some of ones by the app itself =)",
   slogan: "Feel free to explore!!!",
 };

@@ -1,34 +1,42 @@
-import React, { FC, forwardRef } from "react";
+import React, { FC } from "react";
 import cn from "classnames";
+
 import { Shape } from "@src/components/shape";
+import { Icon } from "@src/components/icon";
 
 import { ButtonProps } from "./interfaces";
 
+import { cnAppearance, cnSizes } from "./styles/styles";
 import s from "./styles/button.module.scss";
 
 export const Button: FC<ButtonProps> = (props) => {
   const {
     size = "l",
+    isGhost = false,
     appearance = "primary",
-    children,
+    iconName,
+    reversed = false,
     disabled = false,
     type = "button",
+    children,
     ...rest
   } = props;
-
-  console.log(s);
 
   return (
     <button
       {...rest}
       disabled={disabled}
       type={type}
-      className={cn(s.button, s[`button_${size}`], {
-        [s[`button_${appearance}`]]: !disabled,
+      className={cn(s.button, cnSizes[size], {
+        [cnAppearance[appearance]]: !isGhost && !disabled,
+        [s.button_ghost]: isGhost && !disabled,
+        [s.button_inversed]: reversed,
         [s.button_disabled]: disabled,
       })}
     >
-      <Shape className={s.button_shape} isAdaptive />
+      {!isGhost && <Shape className={s.button_shape} isAdaptive />}
+
+      {iconName && <Icon iconName={iconName} className={s.button_icon} />}
 
       {children || ""}
     </button>

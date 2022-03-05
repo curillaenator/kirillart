@@ -8,9 +8,15 @@
   .description {
     width: 100%;
 
-    .title {
-      background-color: wheat;
+    .link {
+      &_icon {
+        width: 24px;
+        height: 24px;
+      }
     }
+
+    // .title {
+    // }
   }
 
   .gallery {

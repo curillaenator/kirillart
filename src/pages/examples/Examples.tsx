@@ -24,7 +24,7 @@ export const Examples: FC = () => {
   return (
     <div className={s.examples}>
       <header className={s.header}>
-        <Button size="m" onClick={() => navigate(-1)}>
+        <Button size="m" iconName="back" isGhost onClick={() => navigate(-1)}>
           Back
         </Button>
 
@@ -32,17 +32,22 @@ export const Examples: FC = () => {
 
         <div className={s.prevnext}>
           <Button
-            size="m"
+            size="s"
+            appearance="secondary"
             onClick={() => swiper?.slidePrev()}
             disabled={activeIndex === 0}
+            iconName="arrowLeft"
           >
             Prev
           </Button>
 
           <Button
-            size="m"
+            size="s"
+            appearance="secondary"
             onClick={() => swiper?.slideNext()}
             disabled={activeIndex === examples.length - 1}
+            iconName="arrowRight"
+            reversed
           >
             Next
           </Button>
