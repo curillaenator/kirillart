@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react";
 import { IconNames } from "@src/assets/icons";
 
 export type ButtonAppearances =
@@ -17,5 +18,6 @@ export interface ButtonProps {
   reversed?: boolean;
   disabled?: boolean;
   type?: "button" | "submit";
-  onClick?: () => void;
+  className?: string;
+  onClick?: MouseEventHandler<HTMLElement>;
 }

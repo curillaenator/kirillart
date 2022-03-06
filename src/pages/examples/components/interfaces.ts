@@ -1,6 +1,8 @@
 import { ReactText } from "react";
 import { ReactImageGalleryItem } from "react-image-gallery";
 
+import { WebIcons } from "@src/assets/webIcons";
+
 export interface HeaderProps {
   title: ReactText;
   onBack: () => void;
@@ -10,14 +12,11 @@ export interface HeaderProps {
   onNext: () => void;
 }
 
-// type LinkNames = "Github" | "Website";
-// type Links = Record<string, string>;
-
 export interface SlideProps {
   id: ReactText;
   title: ReactText;
-  description?: ReactText;
+  description: string;
   links?: Record<string, string>;
-  stack?: Record<string, string>;
+  stack?: WebIcons[];
   screenshots?: ReactImageGalleryItem[];
 }

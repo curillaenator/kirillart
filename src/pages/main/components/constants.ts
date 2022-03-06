@@ -31,10 +31,10 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
   {
     posKey: "back3",
     circle: {
-      title: "Examples",
+      title: "Works",
       color: "positive",
       size: "l",
-      link: "/examples",
+      link: "/works",
       style: {
         top: "58%",
         left: "22%",

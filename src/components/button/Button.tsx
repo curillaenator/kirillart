@@ -18,6 +18,7 @@ export const Button: FC<ButtonProps> = (props) => {
     reversed = false,
     disabled = false,
     type = "button",
+    className,
     children,
     ...rest
   } = props;
@@ -27,7 +28,7 @@ export const Button: FC<ButtonProps> = (props) => {
       {...rest}
       disabled={disabled}
       type={type}
-      className={cn(s.button, cnSizes[size], {
+      className={cn(s.button, cnSizes[size], className, {
         [cnAppearance[appearance]]: !isGhost && !disabled,
         [s.button_ghost]: isGhost && !disabled,
         [s.button_inversed]: reversed,
