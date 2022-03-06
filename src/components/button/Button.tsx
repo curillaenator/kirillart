@@ -6,7 +6,7 @@ import { Icon } from "@src/components/icon";
 
 import { ButtonProps } from "./interfaces";
 
-import { cnAppearance, cnSizes } from "./styles/styles";
+import { cnAppearance, cnGhostAppearance, cnSizes } from "./styles/styles";
 import s from "./styles/button.module.scss";
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -30,6 +30,7 @@ export const Button: FC<ButtonProps> = (props) => {
       type={type}
       className={cn(s.button, cnSizes[size], className, {
         [cnAppearance[appearance]]: !isGhost && !disabled,
+        [cnGhostAppearance[appearance]]: isGhost && !disabled,
         [s.button_ghost]: isGhost && !disabled,
         [s.button_inversed]: reversed,
         [s.button_disabled]: disabled,

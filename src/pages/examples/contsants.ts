@@ -75,6 +75,30 @@ export const SLIDES: SlideProps[] = [
     ],
   },
   {
+    id: "Obmen.market",
+    title: "Obmen.market",
+    description: "Obmen.market",
+    stack: ["JavaScript", "React", "Redux", "Sass", "Firebase"],
+    links: {
+      // Github: "https://github.com/curillaenator/RichBee",
+      WebSite: "https://obmen.market/",
+    },
+    // screenshots: [
+    //   {
+    //     original:
+    //       "https://github.com/curillaenator/RichBee/raw/main/screens/image1.jpg",
+    //   },
+    //   {
+    //     original:
+    //       "https://github.com/curillaenator/RichBee/raw/main/screens/image2.jpg",
+    //   },
+    //   {
+    //     original:
+    //       "https://github.com/curillaenator/RichBee/raw/main/screens/image3.jpg",
+    //   },
+    // ],
+  },
+  {
     id: "Mobile app",
     title: "Mobile app",
     description:
@@ -104,6 +128,34 @@ export const SLIDES: SlideProps[] = [
       {
         original:
           "https://github.com/curillaenator/mobile-app/raw/main/screens/image5.jpg",
+      },
+    ],
+  },
+  {
+    id: "MERN App",
+    title: "MERN App",
+    description:
+      "Simple task manager based on MERN stack. <br /> Try it with test account: <br /> <br /> <b>login</b>: k@mail.com <br /> <br /> <b>password</b>: qwqwqwqw",
+    links: {
+      Github: "https://github.com/curillaenator/LearningNodeJS",
+    },
+    stack: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Redux",
+      "NodeJS",
+      "TypeScript",
+      "Styled-Components",
+    ],
+    screenshots: [
+      {
+        original:
+          "https://github.com/curillaenator/LearningNodeJS/raw/main/screens/image1.png",
+      },
+      {
+        original:
+          "https://github.com/curillaenator/LearningNodeJS/raw/main/screens/image2.png",
       },
     ],
   },

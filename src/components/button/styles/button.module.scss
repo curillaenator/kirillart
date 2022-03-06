@@ -14,6 +14,7 @@ $sizes: ("2xl", "xl", "l", "m", "s", "xs");
   --button-icon-size: var(--size-2xl-buttonIconSize);
   --button-direction: row;
   --button-cursor: pointer;
+  --button-transition: 0.08s linear;
 
   cursor: var(--button-cursor);
   position: relative;
@@ -27,6 +28,7 @@ $sizes: ("2xl", "xl", "l", "m", "s", "xs");
   padding: var(--button-padding);
   box-shadow: 0 4px 16px var(--button-shadow-color);
   border-radius: var(--button-border-radius);
+  transition: var(--button-transition);
 
   color: var(--button-font-color);
   font-weight: 600;
@@ -48,10 +50,12 @@ $sizes: ("2xl", "xl", "l", "m", "s", "xs");
     width: var(--button-icon-size);
     height: var(--button-icon-size);
     fill: var(--button-font-color);
+    transition: var(--button-transition);
   }
 
   .button_shape {
     fill: var(--button-color);
+    transition: var(--button-transition);
   }
 
   @each $size in $sizes {
@@ -69,6 +73,24 @@ $sizes: ("2xl", "xl", "l", "m", "s", "xs");
       --button-color: var(--color-#{$color});
       --button-shadow-color: var(--color-#{$color});
       --button-font-color: var(--palette-mono-white);
+
+      &:hover {
+        --button-color: var(--color-#{$color}-400);
+      }
+
+      &:active {
+        --button-color: var(--color-#{$color}-600);
+      }
+    }
+
+    &_ghost_#{$color} {
+      &:hover {
+        --button-font-color: var(--color-#{$color}-400);
+      }
+
+      &:active {
+        --button-font-color: var(--color-#{$color}-600);
+      }
     }
   }
 }
