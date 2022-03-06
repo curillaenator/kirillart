@@ -27,33 +27,42 @@ $sizes: ("2xl", "xl", "l", "m", "s", "xs");
     --circle-border-color: var(--color-primary-200);
     --circle-duration: 2s;
     --circle-delay: 0s;
+    --circle-icon-size: 20%;
+    --circle-min-icon-size: 24px;
 
     cursor: pointer;
     position: absolute;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 8px;
     justify-content: center;
     width: var(--circle-size);
     height: var(--circle-size);
     border-radius: 50%;
     background-color: var(--circle-bg-color);
     transition: 0.08s linear;
-    text-decoration: none;
-    color: var(--palette-mono-white);
     box-shadow: 0 16px 56px var(--circle-bg-color);
     animation: circle-brightness infinite ease-in-out var(--circle-duration)
       var(--circle-delay);
 
-    font: {
-      size: 16px;
-      weight: 600;
+    text-decoration: none;
+    color: var(--palette-mono-white);
+    font-size: 16px;
+    font-weight: 600;
+
+    &_icon {
+      fill: var(--palette-mono-white);
+      width: var(--circle-icon-size);
+      min-width: var(--circle-min-icon-size);
+      height: var(--circle-icon-size);
+      min-height: var(--circle-min-icon-size);
     }
 
     &:hover {
       animation: none;
       filter: saturate(120%) brightness(1.3);
       box-shadow: 0 16px 80px var(--circle-bg-color);
-      //   inset 0 0 0 6px var(--circle-border-color);
     }
 
     &:active {

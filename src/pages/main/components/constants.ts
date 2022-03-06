@@ -5,10 +5,11 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
   {
     posKey: "back1",
     circle: {
-      title: "Me",
+      title: "Home",
       color: "secondary",
       size: "xs",
-      link: "/aboutme",
+      link: "/home",
+      iconName: "home",
       style: {
         top: "16%",
         left: "32%",
@@ -22,6 +23,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       color: "primary",
       size: "2xl",
       link: "/experience",
+      iconName: "experience",
       style: {
         top: "18%",
         left: "6%",
@@ -35,6 +37,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       color: "positive",
       size: "l",
       link: "/works",
+      iconName: "works",
       style: {
         top: "58%",
         left: "22%",
@@ -48,6 +51,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       color: "negative",
       size: "m",
       link: "/contacts",
+      iconName: "contacts",
       style: {
         top: "54%",
         left: "5%",
@@ -61,6 +65,7 @@ export const LAYERS: { posKey: Layers; circle: CircleProps }[] = [
       color: "attention",
       size: "s",
       link: "/skills",
+      iconName: "skills",
       style: {
         top: "30%",
         left: "30%",

@@ -5,6 +5,8 @@ import cn from "classnames";
 import { LAYERS } from "./constants";
 import { CirclesLayerProps } from "./interfaces";
 
+import { Icon } from "@src/components/icon";
+
 import s from "./styles/circles.module.scss";
 
 export const CirclesLayer: FC<CirclesLayerProps> = ({ circlePositions }) => {
@@ -24,6 +26,8 @@ export const CirclesLayer: FC<CirclesLayerProps> = ({ circlePositions }) => {
             )}
             style={{ ...circle.style, ...circlePositions[posKey] }}
           >
+            <Icon iconName={circle.iconName} className={s.circle_icon} />
+
             <span>{circle.title || ""}</span>
           </Link>
         );

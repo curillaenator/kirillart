@@ -11,10 +11,6 @@ export const Background: FC<BackgroundProps> = ({ positionStyles }) => {
         className={s.svg}
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
-        // xmlns:xlink="http://www.w3.org/1999/xlink"
-        // xmlns:svgjs="http://svgjs.com/svgjs"
-        // width="1920"
-        // height="1080"
         preserveAspectRatio="none"
         viewBox="0 0 1920 1080"
       >
@@ -46,12 +42,6 @@ export const Background: FC<BackgroundProps> = ({ positionStyles }) => {
             style={positionStyles.cloud4}
           />
         </g>
-
-        {/* <defs>
-          <mask id="SvgjsMask1128">
-            <rect width="1920" height="1080" fill="#ffffff"></rect>
-          </mask>
-        </defs> */}
       </svg>
     </div>
   );

@@ -5,7 +5,7 @@ export const SLIDES: SlideProps[] = [
     id: "Launchtabs",
     title: "Launchtabs",
     description:
-      "Launchtabs app is fully customizible start page with grouped bookmarks leading to your favorite sites. Bookmarks are easy to setup + drag&drop support. Try it with test account: <br /> <br /> <b>login</b>: test_account@mail.com <br /> <br /> <b>password</b>: testaccount",
+      "Launchtabs app is fully customizible start page with grouped bookmarks leading to your favorite sites. Bookmarks are easy to setup + drag&drop support. Try it with test account: <br /> <br /> <b>login</b>: test_account@mail.com <br /> <b>password</b>: testaccount",
     links: {
       Github: "https://github.com/curillaenator/launchtab",
       Website: "https://launchtab-81b06.web.app",
@@ -34,10 +34,10 @@ export const SLIDES: SlideProps[] = [
     ],
   },
   {
-    id: "This resume app",
-    title: "This resume app",
+    id: "This app",
+    title: "This app",
     description:
-      "I designed this app with hope it is the best way to present myself and show some frontend skills",
+      "I designed this app with hope it is the best way to present myself as well as to show some of my frontend abilities",
     links: {
       Github: "https://github.com/curillaenator/kirillart",
     },
@@ -74,30 +74,15 @@ export const SLIDES: SlideProps[] = [
       },
     ],
   },
-  {
-    id: "Obmen.market",
-    title: "Obmen.market",
-    description: "Obmen.market",
-    stack: ["JavaScript", "React", "Redux", "Sass", "Firebase"],
-    links: {
-      // Github: "https://github.com/curillaenator/RichBee",
-      WebSite: "https://obmen.market/",
-    },
-    // screenshots: [
-    //   {
-    //     original:
-    //       "https://github.com/curillaenator/RichBee/raw/main/screens/image1.jpg",
-    //   },
-    //   {
-    //     original:
-    //       "https://github.com/curillaenator/RichBee/raw/main/screens/image2.jpg",
-    //   },
-    //   {
-    //     original:
-    //       "https://github.com/curillaenator/RichBee/raw/main/screens/image3.jpg",
-    //   },
-    // ],
-  },
+  // {
+  //   id: "Obmen.market",
+  //   title: "Obmen.market",
+  //   description: "Obmen.market",
+  //   stack: ["JavaScript", "React", "Redux", "Sass", "Firebase"],
+  //   links: {
+  //     WebSite: "https://obmen.market/",
+  //   },
+  // },
   {
     id: "Mobile app",
     title: "Mobile app",
@@ -132,10 +117,10 @@ export const SLIDES: SlideProps[] = [
     ],
   },
   {
-    id: "MERN App",
-    title: "MERN App",
+    id: "MERN app",
+    title: "MERN app",
     description:
-      "Simple task manager based on MERN stack. <br /> Try it with test account: <br /> <br /> <b>login</b>: k@mail.com <br /> <br /> <b>password</b>: qwqwqwqw",
+      "Simple task manager based on MERN stack. <br /> Please try it locally with test account: <br /> <br /> <b>login</b>: k@mail.com <br /> <b>password</b>: qwqwqwqw",
     links: {
       Github: "https://github.com/curillaenator/LearningNodeJS",
     },

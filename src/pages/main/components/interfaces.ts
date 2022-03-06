@@ -1,6 +1,8 @@
 import { CSSProperties, ReactText } from "react";
 import { Layers } from "../interfaces";
 
+import { IconNames } from "@src/assets/icons";
+
 type CircleColors =
   | "primary"
   | "secondary"
@@ -16,6 +18,7 @@ export interface CircleProps {
   style: CSSProperties;
   title: ReactText;
   link: string;
+  iconName: IconNames;
 }
 
 export interface CirclesLayerProps {
