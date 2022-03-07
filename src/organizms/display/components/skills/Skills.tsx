@@ -5,29 +5,37 @@ import { Scrollbar } from "@src/components/scrollbar";
 import { Wrapper } from "../Wrapper";
 import { Techblock } from "./components/Techblock";
 
-import { MAJOR_STACK, STYLING, REST } from "../../constants";
+import { INTRO, TECHBLOCKS } from "../../constants";
+
+import { SkillsProps } from "./interfaces";
 
 import s from "./styles/skills.module.scss";
 
-export const Skills: FC = () => {
+export const Skills: FC<SkillsProps> = (props) => {
+  const { intro = INTRO, techblocks = TECHBLOCKS } = props;
+
   return (
     <Wrapper>
       <Scrollbar>
         <div className={s.skills}>
           <div className={cn(s.skills_block, s.texts)}>
-            <h2 className={cn(s.blocktitle, s.texts_right)}>Hardskills</h2>
+            <h2 className={cn(s.texts_right, s.texts_primary)}>Hardskills</h2>
 
-            <p className={s.texts_right}>lasjsclkasklasn</p>
+            <p className={s.texts_right}>{intro}</p>
 
-            <Techblock title="Major" techlist={MAJOR_STACK} />
-
-            <Techblock title="Styling" techlist={STYLING} />
-
-            <Techblock title="Rest" techlist={REST} />
+            {techblocks.map((techblock) => (
+              <Techblock
+                key={techblock.title}
+                title={techblock.title}
+                techlist={techblock.techlist}
+              />
+            ))}
           </div>
 
           <div className={s.skills_block}>
-            <h2>Softskills</h2>
+            <h2 className={cn(s.texts_right, s.texts_primary)}>Softskills</h2>
+
+            <p className={s.texts_right}>{intro}</p>
           </div>
         </div>
       </Scrollbar>

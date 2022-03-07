@@ -17,7 +17,7 @@ export const List = forwardRef<HTMLDivElement, ListProps>((props, ref) => {
 
   return (
     <div className={s.list} ref={ref}>
-      <Shape className={s.list_shape} />
+      <Shape className={s.list_shape} borderRadius={16}/>
 
       {list.map((item) => (
         <button

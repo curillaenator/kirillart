@@ -10,7 +10,7 @@ export const Trigger: FC<TriggerProps> = (props) => {
 
   return (
     <button className={s.trigger} onClick={onOpen} type="button">
-      <Shape className={s.trigger_shape} />
+      <Shape className={s.trigger_shape} borderRadius={16} />
 
       <span className={s.trigger_title}>{title}</span>
 

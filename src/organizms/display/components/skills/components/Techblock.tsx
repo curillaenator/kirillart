@@ -9,12 +9,12 @@ import s from "../styles/skills.module.scss";
 
 export const Techblock: FC<TechblockProps> = ({ title, techlist }) => {
   return (
-    <div>
-      <h3 className={cn(s.texts_right, s.texts_mb8)}>{title}</h3>
+    <div className={s.techblock}>
+      <h3 className={cn(s.texts_right, s.texts_mb16)}>{title}</h3>
 
-      <div className={s.flexrow}>
+      <div className={cn(s.flexrow)}>
         {techlist.map((tech) => (
-          <Techicon iconName={tech} />
+          <Techicon key={tech} iconName={tech} />
         ))}
       </div>
     </div>

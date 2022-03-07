@@ -31,6 +31,8 @@ export const webIcons = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   "Styled-Components": "https://www.styled-components.com/atom.png",
   Jest: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+  Storybook:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg",
   Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   Jira: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
   RTL: "https://miro.medium.com/max/496/0*RfTXIdj0OMqSiDwC",

@@ -1,10 +1,15 @@
 .skills {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 32px;
 
   .texts {
+    &_primary {
+      color: var(--color-primary);
+    }
+
     &_right {
       text-align: right;
     }
@@ -12,12 +17,22 @@
     &_mb8 {
       margin-bottom: 8px;
     }
+
+    &_mb16 {
+      margin-bottom: 16px;
+    }
   }
 
   &_block {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    .techblock {
+      padding: 12px;
+      background-color: var(--mode-color-extrabright);
+      border-radius: 16px;
+    }
 
     .flexrow {
       display: flex;

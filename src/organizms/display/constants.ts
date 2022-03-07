@@ -1,7 +1,7 @@
 import MY_AVATAR from "./assets/avatar.jpg";
 
 import { HomeProps } from "./components/home/interfaces";
-import { WebIcons } from "@src/assets/webIcons";
+import { SkillsProps } from "./components/skills/interfaces";
 
 export const HOME: HomeProps = {
   imageURL: MY_AVATAR,
@@ -14,30 +14,39 @@ export const HOME: HomeProps = {
   slogan: "Feel free to explore!!!",
 };
 
-export const MAJOR_STACK: WebIcons[] = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Redux",
-  "HTML5",
-];
+export const INTRO: NonNullable<SkillsProps["intro"]> =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur enim magni quia, quam natus illo earum distinctio rerum voluptatum blanditiis quasi ea ipsum doloremque consequatur aliquid? Dignissimos inventore cumque incidunt consectetur iste ad, ducimus asperiores, nostrum saepe maxime blanditiis unde at, nam reprehenderit in iure fugit voluptas? Tempora, exercitationem dignissimos?";
 
-export const STYLING: WebIcons[] = [
-  "CSS3",
-  "Sass",
-  "Styled-Components",
-  "Tailwind",
-  "Bootstrap",
-];
-
-export const REST: WebIcons[] = [
-  "NodeJS",
-  "Firebase",
-  "MongoDB",
-  "Express",
-  "Effector",
-  "Jest",
-  "RTL",
-  "Git",
-  "Jira",
+export const TECHBLOCKS: NonNullable<SkillsProps["techblocks"]> = [
+  {
+    title: "Develop with",
+    techlist: [
+      "React",
+      "Redux",
+      "Effector",
+      "JavaScript",
+      "TypeScript",
+      "Webpack",
+      "Ajax",
+      "HTML5",
+    ],
+  },
+  {
+    title: "Beautify with",
+    techlist: ["Styled-Components", "Sass", "Tailwind", "Bootstrap", "CSS3"],
+  },
+  {
+    title: "Make it solid with",
+    techlist: [
+      "MongoDB",
+      "Express",
+      "NodeJS",
+      "Storybook",
+      "Firebase",
+      "Jest",
+      "RTL",
+      "Git",
+      "Jira",
+    ],
+  },
 ];
