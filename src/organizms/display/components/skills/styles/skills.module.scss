@@ -1,0 +1,30 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 32px;
+
+  .texts {
+    &_right {
+      text-align: right;
+    }
+
+    &_mb8 {
+      margin-bottom: 8px;
+    }
+  }
+
+  &_block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .flexrow {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
+}

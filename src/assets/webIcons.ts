@@ -6,7 +6,7 @@ export const webIcons = {
   CSS3: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   Sass: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
   Tailwind:
-    "ttps://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
   Bootstrap:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg",
   TypeScript:
@@ -33,6 +33,7 @@ export const webIcons = {
   Jest: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
   Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   Jira: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
+  RTL: "https://miro.medium.com/max/496/0*RfTXIdj0OMqSiDwC",
   IMDb: "https://m.media-amazon.com/images/G/01/imdb/images/social/imdb_logo.png",
 };
 

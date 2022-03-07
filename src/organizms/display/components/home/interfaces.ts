@@ -1,6 +1,6 @@
 import { ReactText } from "react";
 
-export interface AboutmeProps {
+export interface HomeProps {
   greating: ReactText;
   imageURL: string;
   userName: ReactText;

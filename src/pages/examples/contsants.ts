@@ -8,7 +8,7 @@ export const SLIDES: SlideProps[] = [
       "Launchtabs app is fully customizible start page with grouped bookmarks leading to your favorite sites. Bookmarks are easy to setup + drag&drop support. Try it with test account: <br /> <br /> <b>login</b>: test_account@mail.com <br /> <b>password</b>: testaccount",
     links: {
       Github: "https://github.com/curillaenator/launchtab",
-      Website: "https://launchtab-81b06.web.app",
+      Deployed: "https://launchtab-81b06.web.app",
     },
     stack: [
       "Webpack",
@@ -57,7 +57,7 @@ export const SLIDES: SlideProps[] = [
     stack: ["React", "JavaScript", "TypeScript", "Styled-Components", "IMDb"],
     links: {
       Github: "https://github.com/curillaenator/RichBee",
-      WebSite: "https://curillaenator.github.io/RichBee/",
+      Deployed: "https://curillaenator.github.io/RichBee/",
     },
     screenshots: [
       {
@@ -80,17 +80,17 @@ export const SLIDES: SlideProps[] = [
   //   description: "Obmen.market",
   //   stack: ["JavaScript", "React", "Redux", "Sass", "Firebase"],
   //   links: {
-  //     WebSite: "https://obmen.market/",
+  //     Deployed: "https://obmen.market/",
   //   },
   // },
   {
     id: "Mobile app",
     title: "Mobile app",
     description:
-      "The app was another test exam to one of the job interviews. It represents a rental service for photoboothes. Feel free to go for deployed app =)",
+      "The app was another test exam to one my the job interviews. It represents mobile version of rental service for photoboothes. Feel free to go for deployed app =)",
     links: {
       Github: "https://github.com/curillaenator/mobile-app",
-      Website: "https://curillaenator.github.io/mobile-app/#/",
+      Deployed: "https://curillaenator.github.io/mobile-app/#/",
     },
     stack: ["TypeScript", "React", "Redux", "Styled-Components"],
     screenshots: [

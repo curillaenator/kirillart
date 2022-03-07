@@ -54,24 +54,6 @@
         --link-content-color: var(--color-primary-700);
       }
     }
-
-    .techIcon {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-
-      &_image {
-        width: 40px;
-        height: 40px;
-
-        object-fit: cover;
-      }
-
-      &_title {
-        font-size: 10px;
-      }
-    }
   }
 
   .gallery {

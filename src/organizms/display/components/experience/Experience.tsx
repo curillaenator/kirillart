@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import { Wrapper } from "../Wrapper";
 
-export const Aboutme: FC = () => {
+export const Experience: FC = () => {
   return (
     <Wrapper>
-      <h3>Aboutme</h3>
+      <h3>Experience</h3>
     </Wrapper>
   );
 };

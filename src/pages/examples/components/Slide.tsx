@@ -4,11 +4,9 @@ import ImageGallery from "react-image-gallery";
 import parse from "html-react-parser";
 
 import { Button } from "@src/components/button";
-import { Icon } from "@src/components/icon";
+import { Icon, Techicon } from "@src/components/icon";
 
 import { SlideProps } from "./interfaces";
-
-import { webIcons } from "@src/assets/webIcons";
 
 import s from "./styles/slide.module.scss";
 
@@ -49,15 +47,7 @@ export const Slide: FC<SlideProps> = (props) => {
 
             <div className={s.flex}>
               {stack.map((techName) => (
-                <div className={s.techIcon}>
-                  <img
-                    className={s.techIcon_image}
-                    src={webIcons[techName]}
-                    alt={techName}
-                  />
-
-                  <span className={s.techIcon_title}>{techName}</span>
-                </div>
+                <Techicon iconName={techName} />
               ))}
             </div>
           </div>

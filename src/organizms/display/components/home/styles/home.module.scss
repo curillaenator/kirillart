@@ -1,9 +1,11 @@
-.aboutme {
+.home {
   --avatar-border-width: 8px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  // padding-top: 10%;
-  padding-right: 10%;
+  height: 100%;
 
   .texts {
     width: 100%;
@@ -47,16 +49,49 @@
     margin-bottom: 32px;
 
     &_photo {
+      position: relative;
       width: 50%;
       aspect-ratio: 1 / 1;
       flex-shrink: 0;
 
-      & > img {
+      &_image {
         width: 100%;
         height: 100%;
         border-radius: 50% 50% 50% 32px;
         object-fit: cover;
         border: var(--avatar-border-width) solid var(--color-primary);
+      }
+
+      &_link {
+        --link-color: var(--palette-mono-white);
+
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+
+        &_icon {
+          fill: var(--link-color);
+          width: 16px;
+          height: 16px;
+          transition: 0.08s linear;
+        }
+
+        &_text {
+          color: var(--link-color);
+          transition: 0.08s linear;
+        }
+
+        &:hover {
+          --link-color: var(--color-primary-400);
+        }
+
+        &:active {
+          --link-color: var(--color-primary-600);
+        }
       }
     }
   }

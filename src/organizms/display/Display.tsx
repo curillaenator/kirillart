@@ -3,9 +3,9 @@ import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import cn from "classnames";
 
 import { Shape } from "@src/components/shape";
-import { Aboutme, Contacts, Skills } from "./components";
+import { Home, Aboutme, Contacts, Skills, Experience } from "./components";
 
-import { ABOUTME } from "./constants";
+import { HOME } from "./constants";
 
 import s from "./styles/display.module.scss";
 
@@ -17,17 +17,15 @@ const DisplayComponent: FC = () => {
   return (
     <div className={s.display}>
       <div className={s.screen}>
-        <Shape
-          isAdaptive
-          className={cn(s.screen_shape, {
-            [s.screen_shape_invisible]: /home/i.test(location.pathname),
-          })}
-          borderRadius={32}
-        />
+        {location.pathname !== "/home" && (
+          <Shape isAdaptive className={cn(s.screen_shape)} borderRadius={32} />
+        )}
 
         <Routes>
-          <Route path="home" element={<Aboutme {...ABOUTME} />} />
-          <Route path="experience" element={<h3>experience</h3>} />
+          <Route path="home" element={<Home {...HOME} />} />
+          <Route path="home/aboutme" element={<Aboutme />} />
+
+          <Route path="experience" element={<Experience />} />
           <Route path="skills" element={<Skills />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="*" element={<Navigate to="home" />} />
