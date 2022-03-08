@@ -1,10 +1,4 @@
-# LaunchTab
-
-Start page with bookmarks for web browsers.
-
-[watch deployed app in browser](https://launchtab-81b06.web.app)
-
-## Description
+# My self presentation app
 
 I believe the best way to self present as a frontend dev is to develop presentation app telling who I am and showing some of my frontend abilities. So here we go! =)
 
