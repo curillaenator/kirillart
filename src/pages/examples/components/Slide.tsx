@@ -28,7 +28,12 @@ export const Slide: FC<SlideProps> = (props) => {
 
             <div className={s.flex}>
               {Object.keys(links).map((linkTitle) => (
-                <a href={links[linkTitle]} className={s.link} target="_blank">
+                <a
+                  key={linkTitle}
+                  href={links[linkTitle]}
+                  className={s.link}
+                  target="_blank"
+                >
                   <Icon
                     iconName={linkTitle.toLowerCase()}
                     className={s.link_icon}
@@ -47,7 +52,7 @@ export const Slide: FC<SlideProps> = (props) => {
 
             <div className={s.flex}>
               {stack.map((techName) => (
-                <Techicon iconName={techName} />
+                <Techicon key={techName} iconName={techName} />
               ))}
             </div>
           </div>

@@ -5,7 +5,7 @@ export const SLIDES: SlideProps[] = [
     id: "Launchtabs",
     title: "Launchtabs",
     description:
-      "Launchtabs app is fully customizible start page with grouped bookmarks leading to your favorite sites. Bookmarks are easy to setup + drag&drop support. <br /> Besides app itselt I developed custom <b style='color: var(--color-attention)'>UIKit</b> for it, so no external UI libs used. <br /> <br /> <b>Try deployed app with test account</b>: <br /> <b>login</b>: test_account@mail.com <br /> <b>password</b>: testaccount",
+      "<b>Launchtabs</b> app is fully customizible start page with grouped bookmarks leading to your favorite sites. Bookmarks are easy to setup + drag&drop support. <br /> Besides app itselt I developed custom <b style='color: var(--color-attention)'>UIKit</b> for it, so no external UI libs used. <br /> <br /> <b>Try deployed app with test account</b>: <br /> <b>login</b>: test_account@mail.com <br /> <b>password</b>: testaccount",
     links: {
       Github: "https://github.com/curillaenator/launchtab",
       Deployed: "https://launchtab-81b06.web.app",
@@ -30,6 +30,35 @@ export const SLIDES: SlideProps[] = [
       {
         original:
           "https://github.com/curillaenator/launchtab/raw/main/screens/image3.jpg",
+      },
+    ],
+  },
+  {
+    id: "Obmen.market",
+    title: "Obmen.market",
+    description:
+      "<b>Obmen.market</b> is the service for exchange anything (Demo WIP). <br /> This app was my business idea, so I developed demo version looking for opportunities to go big with it. As for now it is fully working demo app waiting for its chance",
+    stack: ["JavaScript", "React", "Redux", "Sass", "Firebase"],
+    links: {
+      Github: "https://github.com/curillaenator/ObmenMarketApp",
+      Deployed: "https://obmen.market/",
+    },
+    screenshots: [
+      {
+        original:
+          "https://github.com/curillaenator/ObmenMarketApp/raw/main/screenshots/image1.jpg",
+      },
+      {
+        original:
+          "https://github.com/curillaenator/ObmenMarketApp/raw/main/screenshots/image2.jpg",
+      },
+      {
+        original:
+          "https://github.com/curillaenator/ObmenMarketApp/raw/main/screenshots/image3.jpg",
+      },
+      {
+        original:
+          "https://github.com/curillaenator/ObmenMarketApp/raw/main/screenshots/image4.jpg",
       },
     ],
   },
@@ -74,15 +103,7 @@ export const SLIDES: SlideProps[] = [
       },
     ],
   },
-  // {
-  //   id: "Obmen.market",
-  //   title: "Obmen.market",
-  //   description: "Obmen.market",
-  //   stack: ["JavaScript", "React", "Redux", "Sass", "Firebase"],
-  //   links: {
-  //     Deployed: "https://obmen.market/",
-  //   },
-  // },
+
   {
     id: "Mobile app",
     title: "Mobile app",
