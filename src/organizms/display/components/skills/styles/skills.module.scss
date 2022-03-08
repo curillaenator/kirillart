@@ -6,6 +6,10 @@
   gap: 32px;
 
   .texts {
+    &_lh {
+      line-height: 1.5;
+    }
+
     &_primary {
       color: var(--color-primary);
     }
@@ -29,6 +33,7 @@
     gap: 16px;
 
     .techblock {
+      width: 100%;
       padding: 12px;
       background-color: var(--mode-color-extrabright);
       border-radius: 16px;

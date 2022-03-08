@@ -14,8 +14,11 @@ export const HOME: HomeProps = {
   slogan: "Feel free to explore!!!",
 };
 
-export const INTRO: NonNullable<SkillsProps["intro"]> =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur enim magni quia, quam natus illo earum distinctio rerum voluptatum blanditiis quasi ea ipsum doloremque consequatur aliquid? Dignissimos inventore cumque incidunt consectetur iste ad, ducimus asperiores, nostrum saepe maxime blanditiis unde at, nam reprehenderit in iure fugit voluptas? Tempora, exercitationem dignissimos?";
+export const HARDSKILLS: NonNullable<SkillsProps["hardskills"]> =
+  "I'm mostly focudes on <b style='color: var(--color-attention)'>React</b> environment with its modern approach. <br /> <br /> Here are technologies I use in my job and in my own projects, represented in <b style='color: var(--color-attention)'>Works</b> section:";
+
+export const SOFTSKILLS: NonNullable<SkillsProps["softskills"]> =
+  "I do speak <b style='color: var(--color-attention)'>English</b> and Russian <br /> <br /> I'm a fast learner and permanently trying to enchance my knowledge. Although it's quite chalenging I'd love to work with people who have higher qualification so I can rise faster as a developer <br /> <br /> I'm able to analise code weither it should be improved/refactored/rewritten etc. I mean the purpose is quality of the code <br /> <br /> I use to work in a remote <b style='color: var(--color-attention)'>Team</b> of developers with various capabilities who are focused on maintaining reliable and fast UI either it is Kit of reusable UI components in design system or whole app pages. So I'm sure <b style='color: var(--color-attention)'>communication</b> among the team is key to success. Whatever it is - helping teamate or participating in huge debates over usage of ongoing technology in project - healthy discussion helps to spread workload equaly among the team, it saves time and definitely helps to rise skills";
 
 export const TECHBLOCKS: NonNullable<SkillsProps["techblocks"]> = [
   {
