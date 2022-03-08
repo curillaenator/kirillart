@@ -21,15 +21,15 @@ export const SLIDES: SlideProps[] = [
     screenshots: [
       {
         original:
-          "https://github.com/curillaenator/launchtab/raw/main/screens/image1.png",
+          "https://github.com/curillaenator/launchtab/raw/main/screens/image1.jpg",
       },
       {
         original:
-          "https://github.com/curillaenator/launchtab/raw/main/screens/image2.png",
+          "https://github.com/curillaenator/launchtab/raw/main/screens/image2.jpg",
       },
       {
         original:
-          "https://github.com/curillaenator/launchtab/raw/main/screens/image3.png",
+          "https://github.com/curillaenator/launchtab/raw/main/screens/image3.jpg",
       },
     ],
   },
