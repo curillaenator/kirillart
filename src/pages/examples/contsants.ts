@@ -2,6 +2,34 @@ import { SlideProps } from "./components/interfaces";
 
 export const SLIDES: SlideProps[] = [
   {
+    id: "This app",
+    title: "This app",
+    description:
+      "I believe the best way to self present as a frontend dev is to develop presentation app telling who I am and showing some of my frontend abilities. So here we go! =) <br /> <br /> Main feature of this app besides presentation of me is styles built on <b style='color: var(--color-attention)'>SASS</b> as style compiler and <b style='color: var(--color-attention)'>CSSVaraibles</b> to achieve small, fast and reliable themization without any UI/CSS library",
+    links: {
+      Github: "https://github.com/curillaenator/kirillart",
+    },
+    stack: ["Webpack", "TypeScript", "React", "Effector", "Sass"],
+    screenshots: [
+      {
+        original:
+          "https://github.com/curillaenator/kirillart/raw/master/screens/image1.jpg",
+      },
+      {
+        original:
+          "https://github.com/curillaenator/kirillart/raw/master/screens/image2.jpg",
+      },
+      {
+        original:
+          "https://github.com/curillaenator/kirillart/raw/master/screens/image3.jpg",
+      },
+      {
+        original:
+          "https://github.com/curillaenator/kirillart/raw/master/screens/image4.jpg",
+      },
+    ],
+  },
+  {
     id: "Launchtabs",
     title: "Launchtabs",
     description:
@@ -62,22 +90,7 @@ export const SLIDES: SlideProps[] = [
       },
     ],
   },
-  {
-    id: "This app",
-    title: "This app",
-    description:
-      "I believe the best way to self present as a frontend dev is to develop presentation app telling who I am and showing some of my frontend abilities. So here we go! =) <br /> <br /> Main feature of this app besides presentation of me is styles built on <b style='color: var(--color-attention)'>SASS</b> as style compiler and <b style='color: var(--color-attention)'>CSSVaraibles</b> to achieve small, fast and reliable themization without any UI/CSS library",
-    links: {
-      Github: "https://github.com/curillaenator/kirillart",
-    },
-    stack: ["Webpack", "TypeScript", "React", "Effector", "Sass"],
-    screenshots: [
-      {
-        original:
-          "https://besthqwallpapers.com/Uploads/23-1-2021/153544/thumb2-3d-yellow-ball-smile-positive-concepts-3d-ball-3d-smile-emotions-smileys-smile.jpg",
-      },
-    ],
-  },
+
   {
     id: "Search movies with RichBee",
     title: "Search movies with RichBee",
