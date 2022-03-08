@@ -15,14 +15,6 @@
     "google",
     "plugin:prettier/recommended"
   ],
-  //   "settings": {
-  //     "import/resolver": {
-  //       "node": {
-  //         "extentions": [".js", ".jsx", ".ts", ".tsx"],
-  //         "moduleDirectory": ["node_modules", "src"]
-  //       }
-  //     }
-  //   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": ["./tsconfig.json"],
