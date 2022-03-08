@@ -137,11 +137,11 @@ export const SLIDES: SlideProps[] = [
     screenshots: [
       {
         original:
-          "https://github.com/curillaenator/LearningNodeJS/raw/main/screens/image1.png",
+          "https://github.com/curillaenator/LearningNodeJS/raw/main/screens/image1.jpg",
       },
       {
         original:
-          "https://github.com/curillaenator/LearningNodeJS/raw/main/screens/image2.png",
+          "https://github.com/curillaenator/LearningNodeJS/raw/main/screens/image2.jpg",
       },
     ],
   },
