@@ -15,6 +15,7 @@
     "start": "webpack serve --open",
     "build": "webpack --mode production",
     "lint": "eslint --ext .ts,.tsx src --fix",
+    "cm": "cz",
     "devbuild": "webpack",
     "prepare": "husky install"
   },
@@ -27,6 +28,11 @@
   "prettier": {
     "singleQuote": false,
     "printWidth": 80
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "classnames": "^2.3.1",
@@ -53,8 +59,10 @@
     "@typescript-eslint/parser": "^5.14.0",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
+    "commitizen": "^4.2.4",
     "copy-webpack-plugin": "10.2.4",
     "css-loader": "^6.7.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.10.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
@@ -73,10 +81,5 @@
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
