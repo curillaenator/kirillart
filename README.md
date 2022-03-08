@@ -8,7 +8,6 @@ Main feature of this app besides presentation of me is styles built on <b>SASS</
 
 - Typescript
 - React/Effector
-- Firebase
 - Sass with CSSVariables
 - Webpack
 

@@ -18,17 +18,14 @@ export const usePositionStyle = () => {
 
   const { cX, cY, posX, posY } = position;
 
-  const watchMouse = useCallback(
-    (e: MouseEvent) => {
-      setPosition({
-        cX: window.innerWidth / 2,
-        cY: window.innerHeight / 2,
-        posX: e.pageX - window.innerWidth / 2,
-        posY: e.pageY - window.innerHeight / 2,
-      });
-    },
-    [window.innerWidth]
-  );
+  const watchMouse = useCallback((e: MouseEvent) => {
+    setPosition({
+      cX: window.innerWidth / 2,
+      cY: window.innerHeight / 2,
+      posX: e.pageX - window.innerWidth / 2,
+      posY: e.pageY - window.innerHeight / 2,
+    });
+  }, []);
 
   const layerRotation: CSSProperties = {
     transform: `

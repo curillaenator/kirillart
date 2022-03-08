@@ -33,6 +33,7 @@ export const Slide: FC<SlideProps> = (props) => {
                   href={links[linkTitle]}
                   className={s.link}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <Icon
                     iconName={linkTitle.toLowerCase()}

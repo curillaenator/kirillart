@@ -11,12 +11,12 @@ export const useClickAway = (
         onOutsideClick();
       }
     },
-    [block]
+    [block, ref, onOutsideClick]
   );
 
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
 
     return () => document.removeEventListener("click", handleOutsideClick);
-  }, [ref, onOutsideClick]);
+  }, [ref, handleOutsideClick]);
 };

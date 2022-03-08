@@ -7,17 +7,20 @@ import { ListProps } from "./interfaces";
 
 import s from "../styles/dropdown.module.scss";
 
-export const List = forwardRef<HTMLDivElement, ListProps>((props, ref) => {
+const List = forwardRef<HTMLDivElement, ListProps>((props, ref) => {
   const { list, onClose } = props;
 
-  const handleClick = useCallback((itemClick: () => void) => {
-    itemClick();
-    onClose();
-  }, []);
+  const handleClick = useCallback(
+    (itemClick: () => void) => {
+      itemClick();
+      onClose();
+    },
+    [onClose]
+  );
 
   return (
     <div className={s.list} ref={ref}>
-      <Shape className={s.list_shape} borderRadius={16}/>
+      <Shape className={s.list_shape} borderRadius={16} />
 
       {list.map((item) => (
         <button
@@ -37,3 +40,7 @@ export const List = forwardRef<HTMLDivElement, ListProps>((props, ref) => {
     </div>
   );
 });
+
+List.displayName = "List";
+
+export { List };

@@ -1,4 +1,3 @@
-import { useCallback } from "react";
 import { useStore } from "effector-react";
 import { themeStore, setTheme, setDarkMode, Themes } from "@src/store/theme";
 

@@ -9,7 +9,7 @@ export const useShapeParams: UseShapeParams = (isAdaptive, radius, height) => {
   const setShapeSize = useCallback(() => {
     ref.current &&
       setWH([ref.current.clientWidth, height || ref.current.clientHeight]);
-  }, []);
+  }, [height]);
 
   useEffect(() => {
     setShapeSize();
@@ -18,7 +18,7 @@ export const useShapeParams: UseShapeParams = (isAdaptive, radius, height) => {
       window.addEventListener("resize", setShapeSize);
       return () => window.removeEventListener("resize", setShapeSize);
     }
-  }, []);
+  }, [isAdaptive, setShapeSize]);
 
   const shapeData: [number, number, string] = useMemo(() => {
     const [W, H] = WH;
@@ -33,7 +33,7 @@ export const useShapeParams: UseShapeParams = (isAdaptive, radius, height) => {
     V ${R} C 0 ${S} ${S} 0 ${R} 0 Z`;
 
     return [W, H, path];
-  }, [WH]);
+  }, [WH, radius]);
 
   return [...shapeData, ref];
 };
