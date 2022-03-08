@@ -18,5 +18,5 @@ export const useClickAway = (
     document.addEventListener("click", handleOutsideClick);
 
     return () => document.removeEventListener("click", handleOutsideClick);
-  }, [ref, handleOutsideClick]);
+  }, [ref]);
 };
