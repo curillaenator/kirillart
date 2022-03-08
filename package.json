@@ -34,6 +34,12 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
   "dependencies": {
     "classnames": "^2.3.1",
     "effector": "^22.2.0",
