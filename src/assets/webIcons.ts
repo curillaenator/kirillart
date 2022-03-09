@@ -37,6 +37,10 @@ export const webIcons = {
   Jira: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
   RTL: "https://miro.medium.com/max/496/0*RfTXIdj0OMqSiDwC",
   IMDb: "https://m.media-amazon.com/images/G/01/imdb/images/social/imdb_logo.png",
+  Figma:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  Photoshop:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg",
 };
 
 export type WebIcons = keyof typeof webIcons;

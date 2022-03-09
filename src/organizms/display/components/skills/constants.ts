@@ -20,6 +20,10 @@ export const SKILLS: NonNullable<SkillsProps["data"]> = {
       ],
     },
     {
+      title: "Get design from",
+      techlist: ["Figma", "Photoshop"],
+    },
+    {
       title: "Beautify with",
       techlist: ["Styled-Components", "Sass", "Tailwind", "Bootstrap", "CSS3"],
     },
