@@ -19,7 +19,7 @@ export const Slide: FC<SlideProps> = (props) => {
         <div>
           <h2 className={s.title}>Idea</h2>
 
-          <p className={s.short}>{parse(description)}</p>
+          <p className={s.idea}>{parse(description)}</p>
         </div>
 
         {links && (

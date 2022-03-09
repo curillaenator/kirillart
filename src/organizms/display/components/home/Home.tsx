@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 import { Icon } from "@src/components/icon";
 import { Wrapper } from "../Wrapper";
 
+import { HOME } from "./constants";
 import { HomeProps } from "./interfaces";
 
 import s from "./styles/home.module.scss";
 
 export const Home: FC<HomeProps> = (props) => {
-  const { greating, imageURL, userName, job, description, slogan } = props;
+  const { data = HOME } = props;
+  const { greating, imageURL, userName, job, description, slogan } = data;
 
   return (
     <Wrapper>

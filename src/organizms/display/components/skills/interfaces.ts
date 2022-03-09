@@ -6,7 +6,9 @@ export interface TechblockProps {
   techlist: WebIcons[];
 }
 export interface SkillsProps {
-  hardskills?: ReactText;
-  techblocks?: TechblockProps[];
-  softskills?: ReactText;
+  data?: {
+    hardskills: ReactText;
+    softskills: ReactText;
+    techblocks: TechblockProps[];
+  };
 }

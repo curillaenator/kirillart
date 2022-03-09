@@ -6,18 +6,15 @@ import { Scrollbar } from "@src/components/scrollbar";
 import { Wrapper } from "../Wrapper";
 import { Techblock } from "./components/Techblock";
 
-import { HARDSKILLS, TECHBLOCKS, SOFTSKILLS } from "../../constants";
+import { SKILLS } from "./constants";
 
 import { SkillsProps } from "./interfaces";
 
 import s from "./styles/skills.module.scss";
 
 export const Skills: FC<SkillsProps> = (props) => {
-  const {
-    hardskills = HARDSKILLS,
-    techblocks = TECHBLOCKS,
-    softskills = SOFTSKILLS,
-  } = props;
+  const { data = SKILLS } = props;
+  const { hardskills, softskills, techblocks } = data;
 
   return (
     <Wrapper>
