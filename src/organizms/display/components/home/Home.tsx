@@ -2,17 +2,16 @@ import React, { FC } from "react";
 import cn from "classnames";
 import { Link } from "react-router-dom";
 
+import { useUserData } from "./hooks";
+
 import { Icon } from "@src/components/icon";
 import { Wrapper } from "../Wrapper";
 
-import { HOME } from "./constants";
-import { HomeProps } from "./interfaces";
-
 import s from "./styles/home.module.scss";
 
-export const Home: FC<HomeProps> = (props) => {
-  const { data = HOME } = props;
-  const { greating, imageURL, userName, job, description, slogan } = data;
+export const Home: FC = () => {
+  const { data } = useUserData();
+  const { photoUrl, greating, userName, job, description, slogan } = data;
 
   return (
     <Wrapper>
@@ -32,7 +31,7 @@ export const Home: FC<HomeProps> = (props) => {
 
           <div className={s.user_photo}>
             <img
-              src={imageURL}
+              src={photoUrl}
               alt={userName as string}
               className={s.user_photo_image}
             />
