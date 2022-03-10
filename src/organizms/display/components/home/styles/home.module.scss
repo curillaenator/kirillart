@@ -1,13 +1,3 @@
-@keyframes photoAppear {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 100%;
-  }
-}
-
 .home {
   --avatar-border-width: 8px;
 
@@ -74,7 +64,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        animation: photoAppear 0.2s ease-in;
       }
 
       &_link {
