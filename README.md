@@ -2,6 +2,8 @@
 
 I believe the best way to self present as a frontend dev is to develop presentation app telling who I am and showing some of my frontend abilities. So here we go! =)
 
+[Watch deployed app in browser](https://arturovapp.web.app)
+
 Main feature of this app besides presentation of me is styles built on <b>SASS</b> as style compiler and <b>CSSVaraibles</b> to achieve small, fast and reliable themization without any UI/CSS library
 
 ## Stack

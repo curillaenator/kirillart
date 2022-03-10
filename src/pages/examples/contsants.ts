@@ -8,6 +8,7 @@ export const SLIDES: SlideProps[] = [
       "I believe the best way to self present as a frontend dev is to develop presentation app telling who I am and showing some of my frontend abilities. So here we go! =) <br /> <br /> Main feature of this app besides presentation of me is styles built on <b style='color: var(--color-attention)'>SASS</b> as style compiler and <b style='color: var(--color-attention)'>CSSVaraibles</b> to achieve small, fast and reliable themization without any UI/CSS library",
     links: {
       Github: "https://github.com/curillaenator/kirillart",
+      Deployed: "https://arturovapp.web.app/",
     },
     stack: ["Webpack", "TypeScript", "React", "Effector", "Sass"],
     screenshots: [
