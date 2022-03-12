@@ -1,4 +1,4 @@
-import { ReactText } from "react";
+import { ReactText, MouseEvent } from "react";
 import { ReactImageGalleryItem } from "react-image-gallery";
 
 import { WebIcons } from "@src/assets/webIcons";
@@ -19,4 +19,8 @@ export interface SlideProps {
   links?: Record<string, string>;
   stack?: WebIcons[];
   screenshots?: ReactImageGalleryItem[];
+}
+
+export interface BgProps {
+  onWatchMouse: (e: MouseEvent) => void;
 }

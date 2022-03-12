@@ -1,5 +1,5 @@
-import React, { FC, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { FC, useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperInstance } from "swiper";
@@ -17,12 +17,22 @@ import s from "./styles/examples.module.scss";
 
 export const Examples: FC = () => {
   const navigate = useNavigate();
+  const { exampleId } = useParams();
 
   const { layerRotation, positionStyles, watchMouse } = usePositionStyle();
 
   const [examples, setExamples] = useState<SlideProps[]>([]);
   const [swiper, setSwiper] = useState<SwiperInstance | null>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
+
+  useEffect(() => {
+    if (!!exampleId && !!swiper) {
+      const navIndex = SLIDES.findIndex((slide) => slide.id === exampleId);
+
+      setActiveIndex(navIndex);
+      swiper.slideTo(navIndex);
+    }
+  }, [exampleId, swiper]);
 
   return (
     <div className={s.examples} onMouseMove={watchMouse}>
@@ -44,10 +54,13 @@ export const Examples: FC = () => {
           className={s.swiper}
           slidesPerView={1}
           spaceBetween={30}
-          keyboard={{ enabled: true }}
+          keyboard={{ enabled: !exampleId }}
           modules={[Keyboard]}
           onSwiper={(swiper) => setSwiper(swiper)}
-          onActiveIndexChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          onActiveIndexChange={(swiper) => {
+            setActiveIndex(swiper.activeIndex);
+            navigate("/works", { replace: true });
+          }}
           onBeforeInit={() => setExamples(SLIDES)}
           onBeforeDestroy={() => setExamples([])}
         >

@@ -1,13 +1,20 @@
 import React, { FC } from "react";
 import { Wrapper } from "../Wrapper";
 
+import { useGetExperience } from "./hooks";
+
+import { Job } from "./components";
 import { Scrollbar } from "@src/components/scrollbar";
 
 export const Experience: FC = () => {
+  const { data } = useGetExperience();
+
   return (
     <Wrapper>
       <Scrollbar>
-        <h3>Experience</h3>
+        {data.map((job) => (
+          <Job {...job} key={job.company} />
+        ))}
       </Scrollbar>
     </Wrapper>
   );

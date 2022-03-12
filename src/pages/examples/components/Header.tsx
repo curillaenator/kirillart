@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 
 import { Button } from "@src/components/button";
 
@@ -6,7 +6,7 @@ import { HeaderProps } from "./interfaces";
 
 import s from "./styles/header.module.scss";
 
-export const Header: FC<HeaderProps> = (props) => {
+const HeaderComponent: FC<HeaderProps> = (props) => {
   const { title, onBack, prevDisabled, onPrev, nextDisabled, onNext } = props;
 
   return (
@@ -40,3 +40,5 @@ export const Header: FC<HeaderProps> = (props) => {
     </header>
   );
 };
+
+export const Header = memo(HeaderComponent);
