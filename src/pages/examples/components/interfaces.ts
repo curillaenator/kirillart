@@ -1,7 +1,9 @@
-import { ReactText, MouseEvent } from "react";
+import { ReactText } from "react";
 import { ReactImageGalleryItem } from "react-image-gallery";
 
 import { WebIcons } from "@src/assets/webIcons";
+
+import { Watch } from "../interfaces";
 
 export interface HeaderProps {
   title: ReactText;
@@ -22,5 +24,5 @@ export interface SlideProps {
 }
 
 export interface BgProps {
-  onWatchMouse: (e: MouseEvent) => void;
+  handleSetWatch: (watch: Watch) => void;
 }

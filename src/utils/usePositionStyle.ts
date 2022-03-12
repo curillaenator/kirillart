@@ -13,12 +13,20 @@ export type Layers =
   | "back1"
   | "bg";
 
-export const usePositionStyle = () => {
+type UsePositionStyle = () => {
+  layerRotation: CSSProperties;
+  positionStyles: Record<Layers, CSSProperties>;
+  watchMouse: (e: MouseEvent) => void;
+};
+
+export const usePositionStyle: UsePositionStyle = () => {
   const [position, setPosition] = useState(INITIAL_POSITION);
 
   const { cX, cY, posX, posY } = position;
 
   const watchMouse = useCallback((e: MouseEvent) => {
+    if (!e) return;
+
     setPosition({
       cX: window.innerWidth / 2,
       cY: window.innerHeight / 2,

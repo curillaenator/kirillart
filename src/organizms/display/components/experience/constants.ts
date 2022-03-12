@@ -22,7 +22,7 @@ export const EXPERIENCE: JobProps[] = [
       to: "July 2021",
     },
     description: "Private development",
-    linkToWorks: "/works/obmenmarket",
+    linkToWorks: "/works/2",
     pic: "https://firebasestorage.googleapis.com/v0/b/arturovapp.appspot.com/o/images%2Fjobs%2Fobmen.png?alt=media&token=816a4dcb-f295-42d1-b2a0-59176c93dcd3",
   },
   {

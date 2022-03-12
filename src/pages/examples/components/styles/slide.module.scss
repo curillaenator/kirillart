@@ -69,9 +69,12 @@
 
     .imageGallery {
       max-height: 100%;
+      min-height: 128px;
       border: 8px solid var(--color-primary);
       border-radius: 32px;
       overflow: hidden;
+      backface-visibility: hidden; // hack для сафари
+      transform: translate3d(0, 0, 0); // hack для сафари
 
       &_button {
         position: absolute;
