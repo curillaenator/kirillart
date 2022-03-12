@@ -24,5 +24,6 @@ Main feature of this app besides presentation of me is styles built on <b>SASS</
 
 ## Local start:
 
+- ask me for .env file
 - npm install
 - npm start
