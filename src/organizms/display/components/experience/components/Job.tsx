@@ -11,7 +11,18 @@ export const Job: FC<JobProps> = (props) => {
 
   return (
     <div className={s.jobblock}>
-      <h2 className={s.company}>{company}</h2>
+      {companyLink && (
+        <a
+          href={companyLink}
+          className={s.companyTextLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h2>{company}</h2>
+        </a>
+      )}
+
+      {!companyLink && <h2 className={s.company}>{company}</h2>}
 
       <h3 className={s.job}>{job}</h3>
 

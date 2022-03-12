@@ -30,7 +30,7 @@
     left: 12px;
     width: fit-content;
     height: 40px;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
     transition: 0.08s linear;
     background-color: var(--mode-color-bright);
@@ -42,6 +42,18 @@
     }
 
     @include hoveractive;
+  }
+
+  .companyTextLink {
+    text-decoration: none;
+    transition: 0.08s linear;
+    color: var(--color-primary);
+
+    & > h2 {
+      text-decoration: underline;
+
+      @include hoveractive;
+    }
   }
 
   .company {

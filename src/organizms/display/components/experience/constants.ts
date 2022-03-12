@@ -55,7 +55,7 @@ export const EXPERIENCE: JobProps[] = [
     description: `
       <small>Dec 2017 - Jun 2020</small> - PRO Photographer in <a href='https://swandorhotels.com/en/hotels/swandor-cam-rahn'><b>PhotoTeam Swandor Cam Ranh</b></a> <br />
       <small>Jul 2015 - Nov 2017</small> - Brand manager in <a href='https://www.muztorg.ru/'><b>MuzTorg</b></a> <br />
-      <small>Nov 2011 - Nov 2014</small> - Procurement manager in <b>Enter</b> (no longer exist) <br />
+      <small>Nov 2011 - Nov 2014</small> - Procurement manager in <b>Enter</b> (no longer exists) <br />
       <small>Feb 2010 - Sep 2011</small> - Production Planning Manager in <a href='http://www.progressfood.ru/'><b>Progress</b></a> <br /> 
       etc...
     `,
