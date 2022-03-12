@@ -10,4 +10,5 @@ export interface JobProps {
   };
   description: string;
   pic?: string;
+  linkToWorks?: string;
 }

@@ -5,7 +5,7 @@ export const useUpdateMeta = (path: string) => {
 
   const meta = {
     cacheControl: "public,max-age=7200",
-    contentType: "image/jpeg",
+    // contentType: "image/jpeg",
   };
 
   updateMetadata(file, meta).then((m) => console.log(m));

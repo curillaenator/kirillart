@@ -4,9 +4,11 @@ import parse from "html-react-parser";
 import { JobProps } from "../interfaces";
 
 import s from "../styles/experience.module.scss";
+import { Link } from "react-router-dom";
 
 export const Job: FC<JobProps> = (props) => {
-  const { company, companyLink, job, period, description, pic } = props;
+  const { company, companyLink, job, period, description, pic, linkToWorks } =
+    props;
   const { from, to } = period;
 
   return (
@@ -28,7 +30,11 @@ export const Job: FC<JobProps> = (props) => {
 
       <p className={s.period}>{`${from} - ${to || "Nowdays"}`}</p>
 
-      {description && <p className={s.description}>{parse(description)}</p>}
+      <div className={s.description}>
+        <p>{parse(description)}</p>
+
+        {linkToWorks && <Link to={linkToWorks}>See more details</Link>}
+      </div>
 
       {companyLink && pic && (
         <a

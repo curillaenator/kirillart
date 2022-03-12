@@ -21,8 +21,8 @@ export const EXPERIENCE: JobProps[] = [
       from: "May 2021",
       to: "July 2021",
     },
-    description:
-      "Private development. <br /> See Works section for more details",
+    description: "Private development",
+    linkToWorks: "/works/obmenmarket",
     pic: "https://firebasestorage.googleapis.com/v0/b/arturovapp.appspot.com/o/images%2Fjobs%2Fobmen.png?alt=media&token=816a4dcb-f295-42d1-b2a0-59176c93dcd3",
   },
   {
@@ -33,7 +33,7 @@ export const EXPERIENCE: JobProps[] = [
       from: "March 2021",
       to: "April 2021",
     },
-    description: "UI development",
+    description: "Company's projects UI development",
     pic: "https://firebasestorage.googleapis.com/v0/b/arturovapp.appspot.com/o/images%2Fjobs%2Fintra.png?alt=media&token=9d9f7fee-1d40-4848-bd8b-5f01a0d61de1",
   },
   {
