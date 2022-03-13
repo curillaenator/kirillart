@@ -16,9 +16,9 @@ const INITIAL_USER: User = {
   messages: [],
 };
 
-export const setAnonymousUser = createEvent<User>();
+export const setAnonymousUser = createEvent<string>();
 export const setUserMessages = createEvent<Message[]>();
 
 export const userStore = createStore<User>(INITIAL_USER)
-  .on(setAnonymousUser, (state, user) => ({ ...state, userId: user.userId }))
+  .on(setAnonymousUser, (state, userId) => ({ ...state, userId }))
   .on(setUserMessages, (state, messages) => ({ ...state, messages }));

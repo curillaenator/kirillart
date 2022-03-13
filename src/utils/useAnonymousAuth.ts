@@ -1,16 +1,19 @@
+import { useEffect } from "react";
 import { getAuth, signInAnonymously, onAuthStateChanged } from "firebase/auth";
 import { setAnonymousUser } from "@src/store/user";
 
 export const useAnonymousAuth = () => {
-  const auth = getAuth();
+  useEffect(() => {
+    const auth = getAuth();
 
-  signInAnonymously(auth);
+    signInAnonymously(auth);
 
-  onAuthStateChanged(auth, (user) => {
-    if (!user) return console.log("problems with user");
+    onAuthStateChanged(auth, (user) => {
+      if (!user) return console.log("problems with user");
 
-    const { uid } = user;
+      const { uid } = user;
 
-    setAnonymousUser({ userId: uid, messages: [] });
-  });
+      setAnonymousUser(uid);
+    });
+  }, []);
 };

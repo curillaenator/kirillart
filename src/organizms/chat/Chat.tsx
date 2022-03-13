@@ -13,6 +13,8 @@ const ChatComponent: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { userId, messages, sendMessage } = useMessages();
 
+  console.log(userId);
+
   return (
     <div className={cn(s.chat, { [s.chat_closed]: !isOpen })}>
       <Scrollbar>

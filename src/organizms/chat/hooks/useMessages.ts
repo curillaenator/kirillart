@@ -22,7 +22,7 @@ export const useMessages = () => {
       if (!userId) return;
 
       const messageId = push(child(ref(db), "messages")).key as string;
-      const newMessage = { messageId, userId, text };
+      const newMessage: Message = { messageId, userId, text };
 
       set(ref(db, `messages/${userId}/${messageId}`), newMessage);
     },
