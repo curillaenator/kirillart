@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
-import { useAnonymousAuth } from "@src/utils";
+import { useAuthStateChanged } from "@src/utils";
 
 import { Layout } from "./layout";
 import { Main } from "./main";
@@ -16,7 +16,7 @@ const app = initializeApp(FB_CONFIG);
 getAnalytics(app);
 
 export const App: FC = () => {
-  useAnonymousAuth();
+  useAuthStateChanged();
 
   return (
     <Routes>

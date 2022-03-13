@@ -20,6 +20,11 @@ export const Controls: FC<ControlsProps> = ({ onSendClick }) => {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.code === "Enter") {
+            clickHandler();
+          }
+        }}
       />
 
       <div className={s.send_button}>
