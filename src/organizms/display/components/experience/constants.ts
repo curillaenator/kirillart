@@ -6,7 +6,7 @@ export const EXPERIENCE: JobProps[] = [
     companyLink: "https://sber-tech.com/",
     job: "React Frontend Developer",
     period: {
-      from: "August 2021",
+      from: "Aug 2021",
       to: "",
     },
     description:
@@ -19,9 +19,10 @@ export const EXPERIENCE: JobProps[] = [
     job: "React Frontend Developer",
     period: {
       from: "May 2021",
-      to: "July 2021",
+      to: "Jul 2021",
     },
-    description: "Private development",
+    description:
+      "Co Authoring startup business. Complete frontend app development with its own sophisticated design and custom components",
     linkToWorks: "/works/2",
     pic: "https://firebasestorage.googleapis.com/v0/b/arturovapp.appspot.com/o/images%2Fjobs%2Fobmen.png?alt=media&token=816a4dcb-f295-42d1-b2a0-59176c93dcd3",
   },
@@ -30,30 +31,32 @@ export const EXPERIENCE: JobProps[] = [
     companyLink: "https://intravision.ru/",
     job: "React Frontend Developer",
     period: {
-      from: "March 2021",
-      to: "April 2021",
+      from: "Mar 2021",
+      to: "Apr 2021",
     },
-    description: "Company's projects UI development",
+    description:
+      "Functionality enhancement of one of the company's project. Hired for short term project.",
     pic: "https://firebasestorage.googleapis.com/v0/b/arturovapp.appspot.com/o/images%2Fjobs%2Fintra.png?alt=media&token=9d9f7fee-1d40-4848-bd8b-5f01a0d61de1",
   },
   {
-    company: "IT Education",
-    job: "Frontend learner",
+    company: "Freelance",
+    job: "Frontend Developer",
     period: {
-      from: "July 2020",
+      from: "Jan 2020",
       to: "Feb 2021",
     },
-    description: "",
+    description:
+      "Used to work on different projects with HTML + CSS + JS and React/Redux setups.",
   },
   {
     company: "...rest",
     job: "non IT",
     period: {
       from: "long time ago",
-      to: "Jun 2020",
+      to: "Dec 2019",
     },
     description: `
-      <small>Dec 2017 - Jun 2020</small> - PRO Photographer in <a href='https://swandorhotels.com/en/hotels/swandor-cam-rahn'><b>PhotoTeam Swandor Cam Ranh</b></a> <br />
+      <small>Dec 2017 - Jun 2019</small> - PRO Photographer in <a href='https://swandorhotels.com/en/hotels/swandor-cam-rahn'><b>PhotoTeam Swandor Cam Ranh</b></a> <br />
       <small>Jul 2015 - Nov 2017</small> - Brand manager in <a href='https://www.muztorg.ru/'><b>MuzTorg</b></a> <br />
       <small>Nov 2011 - Nov 2014</small> - Procurement manager in <b>Enter</b> (no longer exists) <br />
       <small>Feb 2010 - Sep 2011</small> - Production Planning Manager in <a href='http://www.progressfood.ru/'><b>Progress</b></a> <br /> 
